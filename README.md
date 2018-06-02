@@ -62,12 +62,10 @@ The latest release of Sourcebot is now supported! Changes include:
 
   * Requires PostgresSQL database, available through add-ons:
     * [Heroku-Postgresql](https://elements.heroku.com/addons/heroku-postgresql) (deploy default)
-  * It also require an instance of Elasticsearch
-	* [Bonsai Elasticsearch] (https://elements.heroku.com/addons/bonsai) (deploy default)
+  * It also requires an instance of Elasticsearch
+	* [Bonsai-Elasticsearch](https://elements.heroku.com/addons/bonsai) (deploy default)
   * `HEROKU_URL` config var renamed to `PUBLIC_URL` to avoid using Heroku's namespace
   * `DATABASE_URL` config var will be set for you to access your database
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 ### Things you should know
 
