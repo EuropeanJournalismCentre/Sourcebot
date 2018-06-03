@@ -1,0 +1,9 @@
+{
+  "name": "Sourcebot"
+  "description": "An open source newsbot to help African news organisations deliver personalized news and engage more effectively via messaging platforms.",
+  "repository": "https://github.com/EuropeanJournalismCommision/Sourcebot",
+  "addons": [
+	"heroku-postgresql:hobby-dev",
+	"bonsai:sandbox-6"
+  ]
+}
