@@ -11,7 +11,7 @@ include './inc/supportfunctions.php';
 error_reporting(E_ALL & ~E_NOTICE);
 
 $VERIFY_TOKEN = 'verify';
-$PAGE_ACCESS_TOKEN = 'EAABxBl3ZATskBAGG8dW89qHBPUAFeCJNdxVxBhJGi62K1rB8wQeIyRksauMlZBIc1xm8saazhrrGanGCHRhZBlZBrmjkWFZA0UgrxyZAgmXa73NZCPZBrVFUH2pYrah3meqTXgd0cSZBohPnFvD1HFWIh1XRouhr3ZAdPIHUhwsqfd8wZDZD';
+$PAGE_ACCESS_TOKEN = 'EAADApqZBVZC84BAAVGZARWYOEa6xvUgij0Jz565tmtPoZCSU8La85o354ZAZBs33r5u27r7VtAZAQuuwxnz0I05lGKLmUFi7v0gT1SnGAX2g51augdGdkZAAzsgObTmDbeSHuJO8X2001VCJYU4jMZBZB4ZCZBZCxXyiuGjlOTD9nkdZB1ZBQZDZD';
 
 $challenge = $_REQUEST['hub_challenge'];
 $verify_token = $_REQUEST['hub_verify_token'];
