@@ -10,9 +10,9 @@ include './inc/supportfunctions.php';
 
 error_reporting(E_ALL & ~E_NOTICE);
 
-$VERIFY_TOKEN = 'verify';
-$PAGE_ACCESS_TOKEN = 'EAADApqZBVZC84BAAVGZARWYOEa6xvUgij0Jz565tmtPoZCSU8La85o354ZAZBs33r5u27r7VtAZAQuuwxnz0I05lGKLmUFi7v0gT1SnGAX2g51augdGdkZAAzsgObTmDbeSHuJO8X2001VCJYU4jMZBZB4ZCZBZCxXyiuGjlOTD9nkdZB1ZBQZDZD';
-                     
+$VERIFY_TOKEN = getenv(VERIFY_TOKEN);
+$PAGE_ACCESS_TOKEN = getenv(ACCESS_TOKEN);
+
 $challenge = $_REQUEST['hub_challenge'];
 $verify_token = $_REQUEST['hub_verify_token'];
 $old_message = "";
