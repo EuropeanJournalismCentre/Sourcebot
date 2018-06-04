@@ -6,6 +6,10 @@
     "ACCESS_TOKEN": {
       "description": "Messenger ACCESS_TOKEN.",
       "value": "secret"
+    },
+    "VERIFY_TOKEN": {
+      "description": "Messenger VERIFICATION_TOKEN.",
+      "value": "secret"
     }
   },
   "addons": [
