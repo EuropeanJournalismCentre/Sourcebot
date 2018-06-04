@@ -19,7 +19,9 @@ function elasticsearch_article_query($sender, $message, $PAGE_ACCESS_TOKEN){
 			
 	$obj = json_decode($result);
 	$i = 0;
+	error_log($result);
 	foreach($obj->hits->hits as $data) {
+		error_log("\nHit\n");
 		$title = $data->_source->post_title;
 		$id = $data->_source->post_id;
 		$content = $data->_source->post_content;
@@ -221,10 +223,6 @@ function elasticsearch_latest_articles($sender, $PAGE_ACCESS_TOKEN){
     
 	$obj = json_decode($result);
 	$i = 0;
-
-	//error_log("Object:     ". $obj);
-	error_log("Result:     ". $result);
-
 	foreach($obj->hits->hits as $data) {
 		$title = $data->_source->post_title;
 		$id = $data->_source->post_id;

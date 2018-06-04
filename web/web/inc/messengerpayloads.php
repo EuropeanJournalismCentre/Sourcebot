@@ -16,11 +16,13 @@
 		// Set the header type to application/json
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
 		// SSL Settings
-		//curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		//curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
 		//curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 		// Send the request
+		error_log("\nPayload: " . var_dump(json_decode($payload)) . "\n");
 		$result  = curl_exec($ch);
+		error_log("\nResult: " . $result . "\n");
 		//Return the result
 		return $result;
 	}
@@ -852,6 +854,148 @@ function send_carousel_template_message($sender, $access_token){
 /************************************************************* Array Carousel Template*****************************************************************************************************************************************************************/
 
 function build_array_carousel_template_message_payload($data, $i, $sender){
+
+	/*for ($k = 0; $k < $i; $k++) {
+		$image_url = "http://source.co.zw/wp-json/wp/v2/posts/" . $data[$k][1] . "?_embed";
+  	$ci = curl_init();
+  	curl_setopt($ci, CURLOPT_SSL_VERIFYPEER, false);
+  	curl_setopt($ci, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($ci, CURLOPT_URL, $image_url);
+		curl_setopt($ci, CURLOPT_TIMEOUT, 3);
+  	$response = curl_exec($ci);    
+  	curl_close($ci);
+  	$image_obj = json_decode($response, true);
+		$image = $image_obj["_embedded"]["wp:featuredmedia"][0]["source_url"];
+		$data[$k][6] = $image;
+	}
+
+	for ($k = 0; $k < $i; $k++) {
+    $parts=parse_url($url);
+    $fp = fsockopen($parts[‘host’], 
+        isset($parts[‘port’])?$parts[‘port’]:80, 
+        $errno, $errstr, 30);
+    pete_assert(($fp!=0), "Couldn’t open a socket to ".$url." (".$errstr.")");
+    $out = "POST ".$parts[‘path’]." HTTP/1.1\r\n";
+    $out.= "Host: ".$parts[‘host’]."\r\n";
+    $out.= "Content-Type: application/x-www-form-urlencoded\r\n";
+    $out.= "Content-Length: ".strlen($post_string)."\r\n";
+    $out.= "Connection: Close\r\n\r\n";
+    fwrite($fp, $out);
+    fclose($fp);
+	}*/
+
+/*
+$image_url = "http://source.co.zw/wp-json/wp/v2/posts/" . $data[0][1] . "?_embed";
+$ci = curl_init();
+curl_setopt($ci, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ci, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ci, CURLOPT_URL, $image_url);
+$response = curl_exec($ci);    
+curl_close($ci);
+$image_obj = json_decode($response, true);
+$image = $image_obj["_embedded"]["wp:featuredmedia"][0]["source_url"];
+$data[0][6] = $image;
+
+$image_url = "http://source.co.zw/wp-json/wp/v2/posts/" . $data[1][1] . "?_embed";
+$ci = curl_init();
+curl_setopt($ci, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ci, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ci, CURLOPT_URL, $image_url);
+$response = curl_exec($ci);    
+curl_close($ci);
+$image_obj = json_decode($response, true);
+$image = $image_obj["_embedded"]["wp:featuredmedia"][0]["source_url"];
+$data[1][6] = $image;
+
+$image_url = "http://source.co.zw/wp-json/wp/v2/posts/" . $data[2][1] . "?_embed";
+$ci = curl_init();
+curl_setopt($ci, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ci, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ci, CURLOPT_URL, $image_url);
+$response = curl_exec($ci);    
+curl_close($ci);
+$image_obj = json_decode($response, true);
+$image = $image_obj["_embedded"]["wp:featuredmedia"][0]["source_url"];
+$data[2][6] = $image;
+
+$image_url = "http://source.co.zw/wp-json/wp/v2/posts/" . $data[3][1] . "?_embed";
+$ci = curl_init();
+curl_setopt($ci, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ci, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ci, CURLOPT_URL, $image_url);
+$response = curl_exec($ci);    
+curl_close($ci);
+$image_obj = json_decode($response, true);
+$image = $image_obj["_embedded"]["wp:featuredmedia"][0]["source_url"];
+$data[3][6] = $image;
+
+$image_url = "http://source.co.zw/wp-json/wp/v2/posts/" . $data[4][1] . "?_embed";
+$ci = curl_init();
+curl_setopt($ci, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ci, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ci, CURLOPT_URL, $image_url);
+$response = curl_exec($ci);    
+curl_close($ci);
+$image_obj = json_decode($response, true);
+$image = $image_obj["_embedded"]["wp:featuredmedia"][0]["source_url"];
+$data[4][6] = $image;
+
+$image_url = "http://source.co.zw/wp-json/wp/v2/posts/" . $data[5][1] . "?_embed";
+$ci = curl_init();
+curl_setopt($ci, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ci, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ci, CURLOPT_URL, $image_url);
+$response = curl_exec($ci);    
+curl_close($ci);
+$image_obj = json_decode($response, true);
+$image = $image_obj["_embedded"]["wp:featuredmedia"][0]["source_url"];
+$data[5][6] = $image;
+
+$image_url = "http://source.co.zw/wp-json/wp/v2/posts/" . $data[6][1] . "?_embed";
+$ci = curl_init();
+curl_setopt($ci, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ci, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ci, CURLOPT_URL, $image_url);
+$response = curl_exec($ci);    
+curl_close($ci);
+$image_obj = json_decode($response, true);
+$image = $image_obj["_embedded"]["wp:featuredmedia"][0]["source_url"];
+$data[6][6] = $image;
+
+$image_url = "http://source.co.zw/wp-json/wp/v2/posts/" . $data[7][1] . "?_embed";
+$ci = curl_init();
+curl_setopt($ci, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ci, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ci, CURLOPT_URL, $image_url);
+$response = curl_exec($ci);    
+curl_close($ci);
+$image_obj = json_decode($response, true);
+$image = $image_obj["_embedded"]["wp:featuredmedia"][0]["source_url"];
+$data[7][6] = $image;
+
+$image_url = "http://source.co.zw/wp-json/wp/v2/posts/" . $data[8][1] . "?_embed";
+$ci = curl_init();
+curl_setopt($ci, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ci, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ci, CURLOPT_URL, $image_url);
+$response = curl_exec($ci);    
+curl_close($ci);
+$image_obj = json_decode($response, true);
+$image = $image_obj["_embedded"]["wp:featuredmedia"][0]["source_url"];
+$data[8][6] = $image;
+
+$image_url = "http://source.co.zw/wp-json/wp/v2/posts/" . $data[9][1] . "?_embed";
+$ci = curl_init();
+curl_setopt($ci, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ci, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ci, CURLOPT_URL, $image_url);
+$response = curl_exec($ci);    
+curl_close($ci);
+$image_obj = json_decode($response, true);
+$image = $image_obj["_embedded"]["wp:featuredmedia"][0]["source_url"];
+$data[9][6] = $image;
+*/
+
 //curl_post_async($data, $i);
 
 	$button_title = "Read More?";

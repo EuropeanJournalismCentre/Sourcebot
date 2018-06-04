@@ -20,26 +20,29 @@ if ($verify_token === $VERIFY_TOKEN) {
   	//If the Verify token matches, return the challenge.
   	echo $challenge;
 }else {
-	$input = json_decode(file_get_contents('php://input'), true);
+	$request_contents = file_get_contents('php://input');
+	error_log("\nRequest: " . $request_contents . " .\n");
+	$input = json_decode($request_contents, true);
 	// Get the Senders Page Scoped ID
 	$sender = $input['entry'][0]['messaging'][0]['sender']['id'];
+	// Get the Senders Page Scoped ID
+	$recipient = $input['entry'][0]['messaging'][0]['recipient']['id'];
 	// Get the Message text sent
 	$message = $input['entry'][0]['messaging'][0]['message']['text'];
 	// Get the Postbacks sent
 	$postback = $input['entry'][0]['messaging'][0]['postback']['payload'];
 	// Get the Entity response
-	$entity = $input['entry'][0]['messaging'][0]['entity']['value'];
+	//$entity = $input[entry][0]['messaging'][0]['entity']['value'];
 
 	$greetings = array("hi", "hello", "hey", "olla", "bonjour");
 	$help = array("help", "clue", "hint", "difficult", "hard", "i dont know");
 	$about = array("about","info","411","rules","rule","law","how does this work","explain","describe");
 
-
+	$count = 1;
 
 	if(!empty($message)){
 
 		$message = strtolower($message);
-		
 		if($message != $last_message)
 		{
 			log_messenger_message($db, $message);
@@ -48,6 +51,7 @@ if ($verify_token === $VERIFY_TOKEN) {
 		}
 
 		if(0 < count(array_intersect(array_map('strtolower', explode(' ',$message)), $greetings))){
+			log_messenger_message($db, $message);
 			$obj =  retrieve_user_profile($sender, $PAGE_ACCESS_TOKEN);
 			$name = $obj->first_name;
 			$welcome_message = "Hi ". $name . "!";
@@ -65,6 +69,7 @@ if ($verify_token === $VERIFY_TOKEN) {
 			send_text_message($sender, $features2, $PAGE_ACCESS_TOKEN);
 			send_share_button_template_message($sender, "", "", "", $PAGE_ACCESS_TOKEN);
 		}elseif(0 < count(array_intersect(array_map('strtolower', explode(' ',$message)), $help))){
+			log_messenger_message($db, $message);
 			$help = "Sourcebot is an open source newsbot to help African news organisations" 
 			. " deliver personalized news and engage more effectively via messaging platforms.";
 			send_text_message($sender, $help, $PAGE_ACCESS_TOKEN);
@@ -78,6 +83,7 @@ if ($verify_token === $VERIFY_TOKEN) {
 			send_text_message($sender, $features2, $PAGE_ACCESS_TOKEN);
 			send_share_button_template_message($sender, "", "", "", $PAGE_ACCESS_TOKEN);
 		}elseif(0 < count(array_intersect(array_map('strtolower', explode(' ',$message)), $about))){
+			log_messenger_message($db, $message);
 			$help = "Sourcebot is an open source newsbot to help African news organisations" 
 			. " deliver personalized news and engage more effectively via messaging platforms.";
 			send_text_message($sender, $help, $PAGE_ACCESS_TOKEN);
@@ -90,23 +96,29 @@ if ($verify_token === $VERIFY_TOKEN) {
 			. " to do this simply follow the instructions under the Articles From section in the menu.";
 			send_text_message($sender, $features2, $PAGE_ACCESS_TOKEN);
 		}elseif($message == 'sound'){
+			log_messenger_message($db, $message);
 			$audio_url = 'https://sourcebotv0.herokuapp.com/sounds/sourcebot.mp3';
 			send_audio_message($sender, $audio_url, $PAGE_ACCESS_TOKEN);			
 		}elseif($message == 'quick'){
+			log_messenger_message($db, $message);
 			send_one_quick_reply_message($sender, "QUICK REPLY EXAMPLE", "QUICK REPLY", "QUICK", $PAGE_ACCESS_TOKEN);
 		}elseif($message == 'video'){
+			log_messenger_message($db, $message);
 			$video_url = 'https://sourcebotv0.herokuapp.com/videos/test.mp4';
 			send_video_message($sender, $video_url, $PAGE_ACCESS_TOKEN);
 		}else{
 			if (($pos = strpos($message, 'date:')) !== false) {
+				log_messenger_message($db, $message);
 				$date = substr($message, $pos+5);
 				send_text_message($sender,  "date: " . $date, $PAGE_ACCESS_TOKEN);
 				elasticsearch_by_date($sender, $date, $PAGE_ACCESS_TOKEN);
 			}elseif(($pos = strpos($message, 'month:')) !== false){
+				log_messenger_message($db, $message);
 				$month = substr($message, $pos+6);
 				send_text_message($sender, "month: " . $month, $PAGE_ACCESS_TOKEN);
 				elasticsearch_by_month($sender, $month, $PAGE_ACCESS_TOKEN);
 			}else{
+				log_messenger_message($db, $message);
 				send_typing_message($sender, $PAGE_ACCESS_TOKEN);	
 				elasticsearch_article_query($sender, $message, $PAGE_ACCESS_TOKEN);
 			}
@@ -224,10 +236,10 @@ if ($verify_token === $VERIFY_TOKEN) {
 	}else{
 		$error = $input->error->message;
 		if (!empty($error)){
-			#logging the reply to the message_log table in the database.
+			#logging the message to the message_log table in the database.
 			$message = $error;
 			$log_timestamp = date('Y-m-d H:i:s', time());
-			$description = "Reply";
+			$description = "Error";
 			$type = "Messenger";
 			create_messenger_message_log($message, $log_timestamp, $description, $type, $db);
 		}
