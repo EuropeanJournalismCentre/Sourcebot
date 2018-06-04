@@ -10,7 +10,7 @@ include './inc/supportfunctions.php';
 
 error_reporting(E_ALL & ~E_NOTICE);
 
-$VERIFY_TOKEN = getenv(ACCESS_TOKEN);
+$VERIFY_TOKEN = getenv(VERIFY_TOKEN);
 $PAGE_ACCESS_TOKEN = getenv(ACCESS_TOKEN);
 
 $challenge = $_REQUEST['hub_challenge'];
