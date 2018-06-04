@@ -9,9 +9,9 @@ function pg_connection_string($DB_NAME, $DB_DSN, $DB_PORT, $DB_USER, $DB_PASSWOR
 # Establish db connection
 $db = pg_connect(pg_connection_string($DB_NAME, $DB_DSN, $DB_PORT, $DB_USER, $DB_PASSWORD));
 if (!$db) {
-    echo 'Database Connection Error' . '</br>';
+    //echo 'Database Connection Error' . '</br>';
 } else {
-    echo 'Connected.';
+    //echo 'Connected.';
 }
 
 ?>
