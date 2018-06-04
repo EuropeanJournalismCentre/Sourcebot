@@ -1,6 +1,9 @@
 {
-  "name": "Start on Heroku: PHP",
-  "description": "A barebones PHP app that makes use of the Silex web framework",
-  "repository": "https://github.com/heroku/php-getting-started",
-  "addons": []
+  "name": "Sourcebot",
+  "description": "An open source newsbot to help African news organisations deliver personalized news and engage more effectively via messaging platforms.",
+  "repository": "https://github.com/EuropeanJournalismCommision/Sourcebot",
+  "addons": [
+	"heroku-postgresql:hobby-dev",
+	"bonsai:sandbox-6"
+  ]
 }
