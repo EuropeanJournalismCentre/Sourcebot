@@ -34,31 +34,31 @@
 
             <ul class="nav">
                 <li>
-                    <a href="dashboard.html">
+                    <a href="dashboard.php">
                         <i class="pe-7s-graph"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
                 <li>
-                    <a href="bot_profile.html">
+                    <a href="bot_profile.php">
                         <i class="pe-7s-user"></i>
                         <p>Bot Profile</p>
                     </a>
                 </li>
                 <li>
-                    <a href="users.html">
+                    <a href="users.php">
                         <i class="pe-7s-note2"></i>
                         <p>Users' Table</p>
                     </a>
                 </li>
                 <li>
-                    <a href="admins.html">
+                    <a href="admins.php">
                         <i class="pe-7s-note2"></i>
                         <p>Admins' Table</p>
                     </a>
                 </li>
                 <li>
-                    <a href="notifications.html">
+                    <a href="#">
                         <i class="pe-7s-bell"></i>
                         <p>Notifications</p>
                     </a>
