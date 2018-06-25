@@ -5,9 +5,8 @@
         $posts[] = array('name'=> 'Kudakwashe', 'surname'=> 'siziva');
         $response['posts'] = $posts;
         $fp = fopen('results.json', 'w');
-        fwrite($fp, json_encode($response));
+        fwrite($fp, json_encode($response, JSON_PRETTY_PRINT));
         fclose($fp);
-        http_redirect("index.php");
     }
     include "./includes/header.php";
     ?>
