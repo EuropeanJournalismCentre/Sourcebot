@@ -24,7 +24,7 @@
                                     <input id="upload" class="#" type="file" name="file-upload">
                                 </div>
 
-                                <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button>
+                                <button type="submit" class="btn btn-info btn-fill pull-right" onclick="bot_details();">Update Profile</button>
                                 <div class="clearfix"></div>
                             </form>
                         </div>

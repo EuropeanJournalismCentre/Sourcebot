@@ -42,3 +42,11 @@ document.querySelector('.cont_form_login').style.display = "none";
 },500);  
   
   }
+
+function bot_details () {
+  const writeJsonFile = require('../node_modules/write-json-file');
+
+  writeJsonFile('foo.json', {foo: true}).then(() => {
+    console.log('done');
+  });
+}
