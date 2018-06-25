@@ -39,7 +39,7 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="bot_profile.html">
                         <i class="pe-7s-user"></i>
                         <p>Bot Profile</p>
