@@ -1,4 +1,4 @@
-<?php include "./header.php"; ?>
+<?php include "./includes/header.php"; ?>
     <div class="content">
         <div class="container-fluid">
             <div class="row">
@@ -65,5 +65,5 @@
             </div>
         </div>
     </div>
-<?php include "./includes/header.php"; ?>
+<?php include "./includes/footer.php"; ?>
 
