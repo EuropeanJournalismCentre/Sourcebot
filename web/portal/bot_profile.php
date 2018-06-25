@@ -8,7 +8,7 @@
                             <h4 class="title">Bot Details</h4>
                         </div>
                         <div class="content">
-                            <form>
+                            <form method=POST enctype=multipart/form-data>
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
@@ -46,7 +46,8 @@
 
                                     <h4 class="title">Kudakwashe Siziva<br />
                                         <small> Gender : Male</small><br />
-                                        <small> Email  : this@that.com</small>
+                                        <small> Email  : this@that.com</small><br>
+                                        <button type="submit" class="btn btn-info btn-fill pull-right" onclick="bot_details();">Update Profile</button>
                                     </h4>
                                 </a>
                             </div>
