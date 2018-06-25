@@ -1,4 +1,16 @@
-<?php include "./includes/header.php"; ?>
+<?php
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $response = array();
+        $posts = array();
+        $posts[] = array('name'=> 'Kudakwashe', 'surname'=> 'siziva');
+        $response['posts'] = $posts;
+        $fp = fopen('results.json', 'w');
+        fwrite($fp, json_encode($response));
+        fclose($fp);
+        http_redirect("index.php");
+    }
+    include "./includes/header.php";
+    ?>
     <div class="content">
         <div class="container-fluid">
             <div class="row">
@@ -8,7 +20,7 @@
                             <h4 class="title">Bot Details</h4>
                         </div>
                         <div class="content">
-                            <form method=POST enctype=multipart/form-data>
+                            <form method="POST" enctype="multipart/form-data" action="bot_profile.php">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
@@ -24,7 +36,7 @@
                                     <input id="upload" class="#" type="file" name="file-upload">
                                 </div>
 
-                                <button type="submit" class="btn btn-info btn-fill pull-right" onclick="bot_details();">Update Profile</button>
+                                <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button>
                                 <div class="clearfix"></div>
                             </form>
                         </div>
@@ -47,7 +59,6 @@
                                     <h4 class="title">Kudakwashe Siziva<br />
                                         <small> Gender : Male</small><br />
                                         <small> Email  : this@that.com</small><br>
-                                        <button type="submit" class="btn btn-info btn-fill pull-right" onclick="bot_details();">Update Profile</button>
                                     </h4>
                                 </a>
                             </div>
