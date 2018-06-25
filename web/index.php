@@ -8,6 +8,19 @@ include './inc/elasticsearchcalls.php';
 include './inc/supportcalls.php';
 include './inc/supportfunctions.php';
 
+/*
+ * Start Const variables
+ */
+define("HELP", "Sourcebot is an open source newsbot to help African news organisations deliver personalized news and engage more effectively via messaging platforms.");
+define("ABOUT", "An open source newsbot to help African news organisations deliver personalized news and engage more effectively via messaging platforms.");
+define("FEATURE0", "Features: You can search for a specific news topic by sending the topic as a message to the bot.");
+define("FEATURE1", "You can get the latest news by selecting the Latest News option in the menu.");
+define("FEATURE2", "Alternatively you can search for articles from a specific date or month to do this simply follow the instructions under the Articles From section in the menu.");
+define("ARTICLEMONTH", "To search for articles from a specific month send a message with the year and month in the following format month:yyyy-mm e.g. month:2015-04");
+define("ARTICLEDATE", "To search for articles from a specific date send a message with the year and month in the following format date:yyyy-mm-dd e.g. date:2015-04-02");
+/*
+ * End Const Variables
+ */
 error_reporting(E_ALL & ~E_NOTICE);
 
 $VERIFY_TOKEN = getenv(VERIFY_TOKEN);
@@ -56,44 +69,35 @@ if ($verify_token === $VERIFY_TOKEN) {
 			$name = $obj->first_name;
 			$welcome_message = "Hi ". $name . "!";
 			send_text_message($sender, $welcome_message, $PAGE_ACCESS_TOKEN);
-			$help = "Sourcebot is an open source newsbot to help African news organisations" 
-			. " deliver personalized news and engage more effectively via messaging platforms.";
+			$help = HELP;
 			send_text_message($sender, $help, $PAGE_ACCESS_TOKEN);
-			$features = "Features: You can search for a specific news topic by sending the topic" 
-			. "as a message to the bot.";
+			$features = FEATURE0;
 			send_text_message($sender, $features, $PAGE_ACCESS_TOKEN);
-			$features1 = "You can get the latest news by selecting the Latest News option in the menu.";
+			$features1 = FEATURE1;
 			send_text_message($sender, $features1, $PAGE_ACCESS_TOKEN);
-			$features2 = "Alternatively you can search for articles from a specific date or month" 
-			. " to do this simply follow the instructions under the Articles From section in the menu.";
+			$features2 = FEATURE2;
 			send_text_message($sender, $features2, $PAGE_ACCESS_TOKEN);
 			send_share_button_template_message($sender, "", "", "", $PAGE_ACCESS_TOKEN);
 		}elseif(0 < count(array_intersect(array_map('strtolower', explode(' ',$message)), $help))){
 			log_messenger_message($db, $message);
-			$help = "Sourcebot is an open source newsbot to help African news organisations" 
-			. " deliver personalized news and engage more effectively via messaging platforms.";
+			$help = HELP;
 			send_text_message($sender, $help, $PAGE_ACCESS_TOKEN);
-			$features = "Features: You can search for a specific news topic by sending the topic" 
-			. "as a message to the bot.";
+			$features = FEATURE0;
 			send_text_message($sender, $features, $PAGE_ACCESS_TOKEN);
-			$features1 = "You can get the latest news by selecting the Latest News option in the menu.";
+			$features1 = FEATURE1;
 			send_text_message($sender, $features1, $PAGE_ACCESS_TOKEN);
-			$features2 = "Alternatively you can search for articles from a specific date or month" 
-			. " to do this simply follow the instructions under the Articles From section in the menu.";
+			$features2 = FEATURE2;
 			send_text_message($sender, $features2, $PAGE_ACCESS_TOKEN);
 			send_share_button_template_message($sender, "", "", "", $PAGE_ACCESS_TOKEN);
 		}elseif(0 < count(array_intersect(array_map('strtolower', explode(' ',$message)), $about))){
 			log_messenger_message($db, $message);
-			$help = "Sourcebot is an open source newsbot to help African news organisations" 
-			. " deliver personalized news and engage more effectively via messaging platforms.";
+			$help = HELP;
 			send_text_message($sender, $help, $PAGE_ACCESS_TOKEN);
-			$features = "Features: You can search for a specific news topic by sending the topic" 
-			. "as a message to the bot.";
+			$features = FEATURE0;
 			send_text_message($sender, $features, $PAGE_ACCESS_TOKEN);
-			$features1 = "You can get the latest news by selecting the Latest News option in the menu.";
+			$features1 = FEATURE1;
 			send_text_message($sender, $features1, $PAGE_ACCESS_TOKEN);
-			$features2 = "Alternatively you can search for articles from a specific date or month" 
-			. " to do this simply follow the instructions under the Articles From section in the menu.";
+			$features2 = FEATURE2;
 			send_text_message($sender, $features2, $PAGE_ACCESS_TOKEN);
 		}elseif($message == 'sound'){
 			log_messenger_message($db, $message);
@@ -152,16 +156,13 @@ if ($verify_token === $VERIFY_TOKEN) {
 
 			$welcome_message = "Hi ". $name . "!";
 			send_text_message($sender, $welcome_message, $PAGE_ACCESS_TOKEN);
-			$help = "Sourcebot is an open source newsbot to help African news organisations" 
-			. " deliver personalized news and engage more effectively via messaging platforms.";
+			$help = HELP;
 			send_text_message($sender, $help, $PAGE_ACCESS_TOKEN);
-			$features = "Features: You can search for a specific news topic by sending the topic" 
-			. "as a message to the bot.";
+			$features = FEATURE0;
 			send_text_message($sender, $features, $PAGE_ACCESS_TOKEN);
-			$features1 = "You can get the latest news by selecting the Latest News option in the menu.";
+			$features1 = FEATURE1;
 			send_text_message($sender, $features1, $PAGE_ACCESS_TOKEN);
-			$features2 = "Alternatively you can search for articles from a specific date or month" 
-			. " to do this simply follow the instructions under the Articles From section in the menu.";
+			$features2 = FEATURE2;
 			send_text_message($sender, $features2, $PAGE_ACCESS_TOKEN);
 			send_share_button_template_message($sender, "", "", "", $PAGE_ACCESS_TOKEN);
 
@@ -186,43 +187,31 @@ if ($verify_token === $VERIFY_TOKEN) {
 
 		}elseif($postback == 'ARTICLESFROM'){
 			
-			$articlesfrommonth = "To search for articles from a specific month send a message with" 
-			. " the year and month in the following format month:yyyy-mm e.g. month:2015-04";
-			$articlesfromdate =  "To search for articles from a specific date send a message with" 
-			. " the year and month in the following format date:yyyy-mm-dd e.g. date:2015-04-02";
+			$articlesfrommonth = ARTICLEMONTH;
+			$articlesfromdate =  ARTICLEDATE;
 			send_text_message($sender, $articlesfrommonth, $PAGE_ACCESS_TOKEN);
 			send_text_message($sender, $articlesfromdate, $PAGE_ACCESS_TOKEN);
 
-		}elseif($postback == 'SHARE_PAYLOAD'){
+		}elseif($postback == 'SHARE_PAYLOAD' || $postback == 'ABOUT_PAYLOAD'){
 			
-			$about = "An open source newsbot to help African news organisations" 
-			. " deliver personalized news and engage more effectively via messaging platforms.";
+			$about = ABOUT;
 			send_text_message($sender, $about, $PAGE_ACCESS_TOKEN);
 			send_share_button_template_message($sender, "", "", "", $PAGE_ACCESS_TOKEN);
 
 		}elseif($postback == 'HELP_PAYLOAD'){
 			
-			$help = "Sourcebot is an open source newsbot to help African news organisations" 
-			. " deliver personalized news and engage more effectively via messaging platforms.";
+			$help = HELP;
 			send_text_message($sender, $help, $PAGE_ACCESS_TOKEN);
-			$features = "Features: You can search for a specific news topic by sending the topic" 
-			. "as a message to the bot.";
+			$features = FEATURE0;
 			send_text_message($sender, $features, $PAGE_ACCESS_TOKEN);
-			$features1 = "You can get the latest news by selecting the Latest News option in the menu.";
+			$features1 = FEATURE1;
 			send_text_message($sender, $features1, $PAGE_ACCESS_TOKEN);
-			$features2 = "Alternatively you can search for articles from a specific date or month" 
-			. " to do this simply follow the instructions under the Articles From section in the menu.";
+			$features2 = FEATURE2;
 			send_text_message($sender, $features2, $PAGE_ACCESS_TOKEN);
 			send_share_button_template_message($sender, "", "", "", $PAGE_ACCESS_TOKEN);
 
-		}elseif($postback == 'ABOUT_PAYLOAD'){
-			
-			$about = "An open source newsbot to help African news organisations" 
-			. " deliver personalized news and engage more effectively via messaging platforms.";
-			send_text_message($sender, $about, $PAGE_ACCESS_TOKEN);
-			send_share_button_template_message($sender, "", "", "", $PAGE_ACCESS_TOKEN);
-
-		}else{
+		}
+		else{
 
 			if (($pos = strpos($postback, 'ID_')) !== false) {
 				$id = substr($postback, $pos+3);
