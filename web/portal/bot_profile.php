@@ -8,7 +8,7 @@
         fwrite($fp, json_encode($response, JSON_PRETTY_PRINT));
         fclose($fp);
 
-    }elseif ($SERVER['REQUEST_METHOD'] === 'GET')
+    }elseif ($_SERVER['REQUEST_METHOD'] === 'GET')
     {
         $string = file_get_contents("bot_details.json");
         $bot_details = json_decode($string, true);
