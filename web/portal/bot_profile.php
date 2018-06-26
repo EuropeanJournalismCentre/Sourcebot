@@ -15,20 +15,20 @@
                 $uploadOk = 0;
             }
         }
-        {
-            if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-                echo "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded.";
-            } else {
-                echo "Sorry, there was an error uploading your file.";
-            }
-            $response = array();
-            $posts = array();
-            $posts[] = array('bot_name' => $_POST['bot_name'], 'bot_image' => $_POST['bot_image']);
-            $response['posts'] = $posts;
-            $fp = fopen('results.json', 'w');
-            fwrite($fp, json_encode($response, JSON_PRETTY_PRINT));
-            fclose($fp);
+
+        if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+            echo "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded.";
+        } else {
+            echo "Sorry, there was an error uploading your file.";
         }
+        $response = array();
+        $posts = array();
+        $posts[] = array('bot_name' => $_POST['bot_name'], 'bot_image' => $_POST['bot_image']);
+        $response['posts'] = $posts;
+        $fp = fopen('bot_details.json', 'w');
+        fwrite($fp, json_encode($response, JSON_PRETTY_PRINT));
+        fclose($fp);
+
     }
     include "./includes/header.php";
     ?>
