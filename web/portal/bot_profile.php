@@ -12,7 +12,7 @@
     {
         $string = file_get_contents('./bot_details.json');
         $bot_details = json_decode($string, true);
-        var_dump($bot_details[0][0]);
+        var_dump($bot_details['bot_name']);
         die();
     }
     include "./includes/header.php";
