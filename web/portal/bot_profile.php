@@ -3,7 +3,7 @@
         $response = array();
         $posts = array();
         $posts[] = array('bot_name' => $_POST['bot_name'], 'bot_image' => $_POST['bot_image']);
-        $response['posts'] = $posts;
+        $response['bot_details'] = $posts;
         $fp = fopen('bot_details.json', 'w');
         fwrite($fp, json_encode($response, JSON_PRETTY_PRINT));
         fclose($fp);
