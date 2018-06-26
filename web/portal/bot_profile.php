@@ -55,9 +55,7 @@
                                 <a href="#">
                                     <img class="avatar border-gray" src="https://avatars3.githubusercontent.com/u/9620622?s=400&u=2ba1016f55802a2afff5fad09a7b4240ef2eb86a&v=4" alt="..." />
 
-                                    <h4 class="title">Kudakwashe Siziva<br />
-                                        <small> Gender : Male</small><br />
-                                        <small> Email  : this@that.com</small><br>
+                                    <h4 class="title">Bot Name: <br />
                                     </h4>
                                 </a>
                             </div>
@@ -67,40 +65,42 @@
                 <div class="col-md-8">
                     <div class="card">
                         <div class="header">
-                            <h4 class="title">Messages</h4>
+                            <h4 class="title">Auto Responses</h4>
                         </div>
                         <div class="content">
-                            <div id="accordion">
-                                <div class="card">
-                                    <div class="card-header" id="headingTwo">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                <script>
-                                                  document.write(new Date())
-                                                </script>
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                                        <div class="card-body">
-                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header" id="headingThree">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                Collapsible Group Item #3
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                                        <div class="card-body">
-                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="content table-responsive table-full-width">
+                                <table class="table table-hover">
+                                    <thead>
+                                    <th>ID</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Kudakwashe</td>
+                                        <td>Siziva</td>
+                                        <td>Active</td>
+                                        <td>
+                                            <a href="" class="btn btn-success btn-xs">Activate</a> |
+                                            <a href="" class="btn btn-default btn-xs">Edit</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Kudakwashe</td>
+                                        <td>Siziva</td>
+                                        <td>Active</td>
+                                        <td>
+                                            <a href="" class="btn btn-danger btn-xs">Deactivate</a> |
+                                            <a href="" class="btn btn-default btn-xs">Edit</a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
                             </div>
                         </div>
                     </div>
