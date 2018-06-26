@@ -1,26 +1,5 @@
 <?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $target_dir = "img/bot-images/";
-        $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-        $uploadOk = 1;
-        $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-// Check if image file is a actual image or fake image
-        if (isset($_POST["submit"])) {
-            $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-            if ($check !== false) {
-                echo "File is an image - " . $check["mime"] . ".";
-                $uploadOk = 1;
-            } else {
-                echo "File is not an image.";
-                $uploadOk = 0;
-            }
-        }
-
-        if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-            echo "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded.";
-        } else {
-            echo "Sorry, there was an error uploading your file.";
-        }
         $response = array();
         $posts = array();
         $posts[] = array('bot_name' => $_POST['bot_name'], 'bot_image' => $_POST['bot_image']);
@@ -46,14 +25,18 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label>Bot Name</label>
-                                            <input type="text" name="bot_name" class="form-control" id="fileToUpload" placeholder="Bot Name" required>
+                                            <input type="text" name="bot_name" class="form-control" placeholder="Bot Name" required>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="#">
-                                    <label for="upload" class="#">Bot Image</label>
-                                    <input id="upload" class="#" type="file" name="bot_image">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Bot Image</label>
+                                            <input type="text" name="bot_image" class="form-control" placeholder="Bot image url" required>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button>
