@@ -13,7 +13,6 @@
         $string = file_get_contents("./bot_details.json");
         $bot_details = json_decode($string, true);
         print_r($bot_details);
-        die();
     }
     include "./includes/header.php";
  ?>
