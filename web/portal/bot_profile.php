@@ -10,10 +10,8 @@
 
     }elseif ($_SERVER['REQUEST_METHOD'] === 'GET')
     {
-        $string = file_get_contents("./bot_details.json");
+        $string = file_get_contents('./bot_details.json');
         $bot_details = json_decode($string, true);
-        var_dump($bot_details);
-        die();
     }
     include "./includes/header.php";
  ?>
