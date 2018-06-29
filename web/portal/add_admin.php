@@ -1,5 +1,6 @@
 <?php 
     include "./includes/header.php";
+    var_dump(retrieve_admin_users());
 ?>
 
     <div class="content">
@@ -8,7 +9,7 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="header">
-                            <h4 class="title">Add Admin <?php echo error_log(retrieve_admin_users());?></h4>
+                            <h4 class="title">Add Admin</h4>
                         </div>
                         <div class="content">
                             <form action="./includes/" enctype="multipart/form-data" method="POST">
