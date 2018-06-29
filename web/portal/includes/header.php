@@ -1,6 +1,6 @@
 <?php
-    include "./conn.php";
-    include "./db_queries.php";
+    include './conn.php';
+    include './db_queries.php';
 ?>
 <!doctype html>
 <html lang="en">
