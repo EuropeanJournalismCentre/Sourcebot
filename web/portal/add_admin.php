@@ -1,6 +1,6 @@
 <?php 
     include "./includes/header.php";
-    var_dump(retrieve_admin_users());
+    var_dump(retrieve_admin_users($db));
 ?>
 
     <div class="content">
