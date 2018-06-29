@@ -10,7 +10,7 @@
                     <div class="card">
                         <div class="header">
                             <h4 class="title">Add Admin</h4>
-                            <?php var_dump($admin_users);?>
+                            <?= $admin_users;?>
                         </div>
                         <div class="content">
                             <form action="./includes/" enctype="multipart/form-data" method="POST">
