@@ -1,4 +1,7 @@
-<?php include "./includes/header.php"; ?>
+<?php 
+    include "./includes/header.php";
+    $admins = retrieve_admin_users($db);
+    ?>
     <div class="content">
         <div class="container-fluid">
             <div class="row">
@@ -19,26 +22,11 @@
                                     <th>Action</th>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Kudakwashe</td>
-                                        <td>Siziva</td>
-                                        <td>Active</td>
-                                        <td>
-                                            <a href="" class="btn btn-success btn-xs">Activate</a> |
-                                            <a href="" class="btn btn-default btn-xs">Edit</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Kudakwashe</td>
-                                        <td>Siziva</td>
-                                        <td>Active</td>
-                                        <td>
-                                            <a href="" class="btn btn-danger btn-xs">Deactivate</a> |
-                                            <a href="" class="btn btn-default btn-xs">Edit</a>
-                                        </td>
-                                    </tr>
+                                <?php foreach($admins as $key=>$value){ ?>
+                                <tr>
+                                    <td><?= $key; ?></td>
+                                </tr>
+                                <?php } ?>
                                 </tbody>
                             </table>
 
