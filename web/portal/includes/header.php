@@ -1,5 +1,5 @@
 <?php
-    include "../config/conn.php";
+    include "../../config/conn.php";
     include "../../inc/db_queries.php";
 ?>
 <!doctype html>
