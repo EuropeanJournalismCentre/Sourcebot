@@ -1,6 +1,5 @@
 <?php 
     include "./includes/header.php";
-    include "../../inc/db_queries.php";
     $admin_users = retrieve_admin_users();
 ?>
 
