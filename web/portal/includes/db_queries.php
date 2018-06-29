@@ -48,10 +48,10 @@ function create_admin_user($name, $password, $permissions, $last_login, $sign_up
 }
 
 function retrieve_admin_users($db){
-	$query = "SELECT name FROM admin_users";
+	$query = "SELECT * FROM admin_users";
 	$result = pg_query($db, $query);
 	if (pg_num_rows($result) > 0){
-		$name = pg_fetch_assoc($result);
+		$name = pg_fetch_all($result);
 	}else {
 		$name = "No Results";
 	}
