@@ -55,7 +55,7 @@ function retrieve_admin_users(){
 	// }else {
 	// 	$name = "No Results";
 	// }
-	echo "Hey wassup";
+	return "Hey wassup";
 
 }
 
