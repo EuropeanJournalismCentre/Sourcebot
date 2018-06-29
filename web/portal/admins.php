@@ -23,9 +23,9 @@
                                     <th>Action</th>
                                 </thead>
                                 <tbody>
-                                <?php foreach($admins as $key=>$value){ ?>
+                                <?php foreach($admins as $admin){ ?>
                                 <tr>
-                                    <td><?= $value; ?></td>
+                                    <td><?= $admin; ?></td>
                                 </tr>
                                 <?php } ?>
                                 </tbody>
