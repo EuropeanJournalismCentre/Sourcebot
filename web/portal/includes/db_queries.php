@@ -48,7 +48,7 @@ function create_admin_user($name, $password, $permissions, $last_login, $sign_up
 }
 
 function retrieve_admin_users(){
-	$query = "SELECT * FROM admin_users where id = 1;";
+	$query = "SELECT * FROM admin_users where id = 1";
 	$result = pg_query($db, $query);
 	if (pg_num_rows($result) > 0){
 		$name = pg_fetch_result($result, 0, 0);
