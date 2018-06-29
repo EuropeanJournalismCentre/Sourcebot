@@ -47,15 +47,15 @@ function create_admin_user($name, $password, $permissions, $last_login, $sign_up
 	}
 }
 
-function fetch_admin_users(){
-	$query = "SELECT * FROM admin_users";
-	$result = pg_query($db, $query);
-	if (pg_num_rows($result) > 0){
-		$name = pg_fetch_assoc($result);
-	}else {
-		$name = "No Results";
-	}
-	return $name;
+function retrieve_admin_users(){
+	// $query = "SELECT * FROM admin_users";
+	// $result = pg_query($db, $query);
+	// if (pg_num_rows($result) > 0){
+	// 	$name = pg_fetch_assoc($result);
+	// }else {
+	// 	$name = "No Results";
+	// }
+	return "Hey wassup";
 
 }
 
