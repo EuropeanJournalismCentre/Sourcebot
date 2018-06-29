@@ -51,7 +51,7 @@ function retrieve_admin_users($db){
 	$query = "SELECT name FROM admin_users";
 	$result = pg_query($db, $query);
 	if (pg_num_rows($result) > 0){
-		$name = pg_fetch_result($result);
+		$name = pg_fetch_assoc($result);
 	}else {
 		$name = "No Results";
 	}
