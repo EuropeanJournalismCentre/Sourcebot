@@ -1,4 +1,9 @@
-<?php include "./includes/header.php"; ?>
+<?php 
+    include "./includes/header.php";
+    include "../../inc/db_queries.php";
+    $admin_users = fetch_admin_users()
+?>
+    ?>
 
     <div class="content">
         <div class="container-fluid">

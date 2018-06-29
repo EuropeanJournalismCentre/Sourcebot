@@ -1,7 +1,3 @@
-<?php
-    include "../../inc/db_queries.php";
-    $admin_users = fetch_admin_users();
-?>
 <!doctype html>
 <html lang="en">
 
