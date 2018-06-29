@@ -1,15 +1,9 @@
 <?php
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $response = array('bot_name' => $_POST['bot_name'], 'bot_image' => $_POST['bot_image'], 'help' => $_POST['help'], 'about' => $_POST['about']);
-        $fp = fopen('bot_details.json', 'w');
-        fwrite($fp, json_encode($response, JSON_PRETTY_PRINT));
-        fclose($fp);
+    
+    //get bot details from the json file
+    $string = file_get_contents('./bot_details.json');
+    $bot_details = json_decode($string, true);
 
-    }elseif ($_SERVER['REQUEST_METHOD'] === 'GET')
-    {
-        $string = file_get_contents('./bot_details.json');
-        $bot_details = json_decode($string, true);
-    }
     include "./includes/header.php";
  ?>
     <div class="content">
@@ -21,7 +15,7 @@
                             <h4 class="title">Bot Details</h4>
                         </div>
                         <div class="content">
-                            <form method="POST" enctype="multipart/form-data" action="bot_profile.php">
+                            <form method="POST" enctype="multipart/form-data" action="./includes/form_submissions.php">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">

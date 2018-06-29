@@ -9,7 +9,7 @@
                             <h4 class="title">Add Admin</h4>
                         </div>
                         <div class="content">
-                            <form>
+                            <form action="./includes/" enctype="multipart/form-data" method="POST">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
