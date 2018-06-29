@@ -1,6 +1,7 @@
 <?php 
     include "./includes/header.php";
     $admins = retrieve_admin_users($db);
+    var_dump($admins);
     ?>
     <div class="content">
         <div class="container-fluid">
