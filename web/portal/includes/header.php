@@ -1,10 +1,6 @@
 <?php
     include "../../inc/db_queries.php";
-    var_dump(fetch_admin_users());
-    //At the top of the php page
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
+    $admin_users = fetch_admin_users();
 ?>
 <!doctype html>
 <html lang="en">

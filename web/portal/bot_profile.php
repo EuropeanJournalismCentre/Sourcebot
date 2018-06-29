@@ -1,7 +1,7 @@
 <?php
     
     //get bot details from the json file
-    $string = file_get_contents('./includes/bot_details.json');
+    $string = file_get_contents('./bot_details.json');
     $bot_details = json_decode($string, true);
 
     include "./includes/header.php";

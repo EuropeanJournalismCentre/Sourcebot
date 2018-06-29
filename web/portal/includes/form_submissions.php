@@ -6,5 +6,7 @@
             $fp = fopen('../bot_details.json', 'w');
             fwrite($fp, json_encode($response, JSON_PRETTY_PRINT));
             fclose($fp);
+            header('Location: ' . $_SERVER["HTTP_REFERER"] );
+            exit;
         }
     }
