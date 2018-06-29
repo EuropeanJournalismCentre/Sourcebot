@@ -47,6 +47,18 @@ function create_admin_user($name, $password, $permissions, $last_login, $sign_up
 	}
 }
 
+function fetch_admin_users(){
+	$query = "SELECT * FROM admin_users";
+	$result = pg_query($db, $query);
+	if (pg_num_rows($result) > 0){
+		$name = pg_fetch_result($result, 0, 0);
+	}else {
+		$name = "No Results";
+	}
+	return $name;
+
+}
+
 function create_admin_user_log($admin_id, $admin_name, $admin_action, $permissions_level, $admin_action_timestamp, $db){
 	if ($admin_id && $admin_name && $admin_action && $permissions_level && $admin_action_timestamp && $db)
 	{

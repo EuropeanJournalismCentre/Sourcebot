@@ -1,3 +1,8 @@
+<?php
+    include "../../inc/db_queries.php";
+    var_dump(fetch_admin_users());
+    die();
+?>
 <!doctype html>
 <html lang="en">
 
