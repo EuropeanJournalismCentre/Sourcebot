@@ -3,7 +3,6 @@
     include "../../inc/db_queries.php";
     $admin_users = fetch_admin_users()
 ?>
-    ?>
 
     <div class="content">
         <div class="container-fluid">
@@ -12,6 +11,7 @@
                     <div class="card">
                         <div class="header">
                             <h4 class="title">Add Admin</h4>
+                            <?php var_dump($admin_users);?>
                         </div>
                         <div class="content">
                             <form action="./includes/" enctype="multipart/form-data" method="POST">
