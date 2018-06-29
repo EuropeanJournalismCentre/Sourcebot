@@ -25,7 +25,7 @@
                                 <tbody>
                                 <?php foreach($admins as $key => $value){ ?>
                                 <tr>
-                                    <td><?= $key['name']; ?></td>
+                                    <td><?= $value['name']; ?></td>
                                 </tr>
                                 <?php } ?>
                                 </tbody>
