@@ -1,4 +1,8 @@
-<?php include "./includes/header.php"; ?>
+<?php 
+    include "./includes/header.php";
+    $user = retrieve_messenger_user($_GET['id']);
+    // $messages =;
+?>
     <div class="content">
         <div class="container-fluid">
             <div class="row">
