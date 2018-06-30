@@ -18,7 +18,7 @@
                                     <img class="avatar border-gray" src="https://avatars3.githubusercontent.com/u/9620622?s=400&u=2ba1016f55802a2afff5fad09a7b4240ef2eb86a&v=4" alt="..." />
 
                                     <h4 class="title"><?= $user[1];?><br />
-                                        <small> Gender : Male</small><br />
+                                        <small> Gender : <?= $user[6];?></small><br />
                                         <small> Email  : this@that.com</small>
                                     </h4>
                                 </a>
