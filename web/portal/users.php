@@ -43,6 +43,7 @@
                                     <?php foreach($users as $key=>$value){ ?>
                                 <tr>
                                     <td><?= $value['id']; ?></td>
+                                    <td width="45px"><img src="<?= $value['profile_pic_url'];?>" class="borders avatar-profile"></td>
                                     <td><?= $value['name']; ?></td>
                                     <td><?= $value['gender']; ?></td>
                                 </tr>
