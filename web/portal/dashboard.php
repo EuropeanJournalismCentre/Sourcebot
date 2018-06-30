@@ -54,106 +54,22 @@
                                 <table class="table">
                                     <tbody>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input id="checkbox1" type="checkbox">
-                                                    <label for="checkbox1"></label>
-                                                </div>
-                                            </td>
                                             <td>Send Broadcast Messages?</td>
-                                            <td class="td-actions text-right">
-                                                <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                                <i class="fa fa-edit"></i>
-                                            </button>
-                                                <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                <i class="fa fa-times"></i>
-                                            </button>
-                                            </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input id="checkbox2" type="checkbox" checked>
-                                                    <label for="checkbox2"></label>
-                                                </div>
-                                            </td>
                                             <td>Download Weekly Stats?</td>
-                                            <td class="td-actions text-right">
-                                                <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                                <i class="fa fa-edit"></i>
-                                            </button>
-                                                <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                <i class="fa fa-times"></i>
-                                            </button>
-                                            </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input id="checkbox3" type="checkbox">
-                                                    <label for="checkbox3"></label>
-                                                </div>
-                                            </td>
                                             <td>Sendly Weekly News Updates?</td>
-                                            <td class="td-actions text-right">
-                                                <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                                <i class="fa fa-edit"></i>
-                                            </button>
-                                                <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                <i class="fa fa-times"></i>
-                                            </button>
-                                            </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input id="checkbox4" type="checkbox" checked>
-                                                    <label for="checkbox4"></label>
-                                                </div>
-                                            </td>
                                             <td>Save User Statistics?</td>
-                                            <td class="td-actions text-right">
-                                                <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                                <i class="fa fa-edit"></i>
-                                            </button>
-                                                <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                <i class="fa fa-times"></i>
-                                            </button>
-                                            </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input id="checkbox5" type="checkbox">
-                                                    <label for="checkbox5"></label>
-                                                </div>
-                                            </td>
                                             <td>Save User Info?</td>
-                                            <td class="td-actions text-right">
-                                                <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                                <i class="fa fa-edit"></i>
-                                            </button>
-                                                <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                <i class="fa fa-times"></i>
-                                            </button>
-                                            </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input id="checkbox6" type="checkbox" checked>
-                                                    <label for="checkbox6"></label>
-                                                </div>
-                                            </td>
                                             <td>Create Weekly Backups?</td>
-                                            <td class="td-actions text-right">
-                                                <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                                <i class="fa fa-edit"></i>
-                                            </button>
-                                                <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                <i class="fa fa-times"></i>
-                                            </button>
-                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -178,106 +94,19 @@
                                 <table class="table">
                                     <tbody>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input id="checkbox1" type="checkbox">
-                                                    <label for="checkbox1"></label>
-                                                </div>
-                                            </td>
-                                            <td>Send Broadcast Messages?</td>
-                                            <td class="td-actions text-right">
-                                                <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                                <i class="fa fa-edit"></i>
-                                            </button>
-                                                <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                <i class="fa fa-times"></i>
-                                            </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input id="checkbox2" type="checkbox" checked>
-                                                    <label for="checkbox2"></label>
-                                                </div>
-                                            </td>
                                             <td>Download Weekly Stats?</td>
-                                            <td class="td-actions text-right">
-                                                <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                                <i class="fa fa-edit"></i>
-                                            </button>
-                                                <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                <i class="fa fa-times"></i>
-                                            </button>
-                                            </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input id="checkbox3" type="checkbox">
-                                                    <label for="checkbox3"></label>
-                                                </div>
-                                            </td>
                                             <td>Sendly Weekly News Updates?</td>
-                                            <td class="td-actions text-right">
-                                                <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                                <i class="fa fa-edit"></i>
-                                            </button>
-                                                <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                <i class="fa fa-times"></i>
-                                            </button>
-                                            </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input id="checkbox4" type="checkbox" checked>
-                                                    <label for="checkbox4"></label>
-                                                </div>
-                                            </td>
                                             <td>Save User Statistics?</td>
-                                            <td class="td-actions text-right">
-                                                <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                                <i class="fa fa-edit"></i>
-                                            </button>
-                                                <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                <i class="fa fa-times"></i>
-                                            </button>
-                                            </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input id="checkbox5" type="checkbox">
-                                                    <label for="checkbox5"></label>
-                                                </div>
-                                            </td>
                                             <td>Save User Info?</td>
-                                            <td class="td-actions text-right">
-                                                <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                                <i class="fa fa-edit"></i>
-                                            </button>
-                                                <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                <i class="fa fa-times"></i>
-                                            </button>
-                                            </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <div class="checkbox">
-                                                    <input id="checkbox6" type="checkbox" checked>
-                                                    <label for="checkbox6"></label>
-                                                </div>
-                                            </td>
                                             <td>Create Weekly Backups?</td>
-                                            <td class="td-actions text-right">
-                                                <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                                <i class="fa fa-edit"></i>
-                                            </button>
-                                                <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                <i class="fa fa-times"></i>
-                                            </button>
-                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
