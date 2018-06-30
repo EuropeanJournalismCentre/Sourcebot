@@ -1,6 +1,7 @@
 <?php 
     include "./includes/header.php";
     $users = retrieve_messenger_users($db);
+    var_dump($user);
 ?>
     <div class="content">
         <div class="container-fluid">
@@ -33,6 +34,7 @@
                                     <td width="45px"><img src="<?= $value['profile_pic_url'];?>" class="borders avatar-profile"></td>
                                     <td><?= $value['name']; ?></td>
                                     <td><?= $value['gender']; ?></td>
+                                    <td><a href="bot_user.php?<?= $value['facebook_id']?>" class="btn btn-default">View more...</a></td>
                                 </tr>
                                 <?php } ?>
                                 </tbody>
