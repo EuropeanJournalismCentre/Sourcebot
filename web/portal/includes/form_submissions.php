@@ -8,5 +8,7 @@
             fclose($fp);
             header('Location: ' . $_SERVER["HTTP_REFERER"] );
             exit;
+        } elseif(isset($_POST["admin_user"])){
+            $data = array('name'=>$_POST['name'], 'email' => $_POST['email']);
         }
     }
