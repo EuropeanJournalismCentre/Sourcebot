@@ -1,8 +1,6 @@
 <?php 
     include "./includes/header.php";
     $users = retrieve_messenger_users($db);
-    var_dump($users);
-    die();
 ?>
     <div class="content">
         <div class="container-fluid">
