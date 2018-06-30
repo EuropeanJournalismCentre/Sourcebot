@@ -32,8 +32,8 @@ function retrieve_messenger_users($db){
 }
 function retrieve_messenger_user($facebook_id, $db){
 	//Check to see if the user is in the Database. If so retrieve No. of failed allempts. If not add them to it the db and retrive No. of failed attempts 
-	$query = "SELECT * FROM users WHERE id = '" . $facebook_id . "'";
-	$result = pg_query($db, $query);
+	$query = "SELECT * FROM messenger_users WHERE id = '" . $facebook_id . "'";
+	// $result = pg_query($db, $query);
 
 	if (pg_num_rows($result) > 0){
 		$name = pg_fetch_result($result, 0, 0);
