@@ -1,4 +1,7 @@
-<?php include "./includes/header.php"; ?>
+<?php 
+    include "./includes/header.php";
+    $users = retrieve_messenger_users($db);
+?>
     <div class="content">
         <div class="container-fluid">
             <div class="row">
@@ -37,6 +40,13 @@
                                         <td>this@that.com</td>
                                         <td><a href="bot_user.php" class="btn btn-default">View more...</a></td>
                                     </tr>
+                                    <?php foreach($users as $key=>$value){ ?>
+                                <tr>
+                                    <td><?= $value['id']; ?></td>
+                                    <td><?= $value['name']; ?></td>
+                                    <td><?= $value['email']; ?></td>
+                                </tr>
+                                <?php } ?>
                                 </tbody>
                             </table>
 

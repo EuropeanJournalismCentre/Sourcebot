@@ -19,6 +19,28 @@ function create_messenger_user($name, $sender_id, $last_message, $profile_pic_ur
 
 }
 
+function retrieve_messenger_users($db){
+	//Check to see if the user is in the Database. If so retrieve No. of failed allempts. If not add them to it the db and retrive No. of failed attempts 
+	$query = "SELECT * FROM users";
+	$result = pg_query($db, $query);
+	if (pg_num_rows($result) > 0){
+		$users = pg_fetch_all($result);
+	}else {
+		$users = "No Results";
+	}
+	return $users;
+}
+function retrieve_messenger_user($facebook_id, $db){
+	//Check to see if the user is in the Database. If so retrieve No. of failed allempts. If not add them to it the db and retrive No. of failed attempts 
+	$query = "SELECT * FROM users WHERE id = '" . $facebook_id . "'";
+	$result = pg_query($db, $query);
+
+	if (pg_num_rows($result) > 0){
+		$name = pg_fetch_result($result, 0, 0);
+	}
+	return $name;
+}
+
 function create_messenger_message_log($message, $log_timestamp, $description, $type, $db){
 	$query = "INSERT INTO messenger_message_log (id, message, log_timestamp, description, type) 
 	VALUES (DEFAULT, '" . $message . "', '" . $log_timestamp . "', '" . $description . "', '" . $type . "')";
