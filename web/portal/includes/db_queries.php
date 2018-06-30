@@ -43,6 +43,10 @@ function create_admin_user($name, $email, $password, $permissions, $last_login, 
 		$query = "INSERT INTO admin_users (id, name, email, password, permissions, last_login, sign_up_timestamp) 
             VALUES (DEFAULT, '" . $name . "','" . $email . "','" . $password . "','" . $permissions . "','" . $time . "', '" . $time . "')";
 		$result = pg_query($db, $query);
+		$data = [ 'name' => 'Kuda', 'age' => $result ];
+
+		header('Content-type: application/json');
+		echo json_encode( $data );
 	// }
 }
 
