@@ -1,4 +1,6 @@
 <?php
+    include __DIR__ . '/conn.php';
+    include __DIR__ . '/db_queries.php';
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (isset($_POST["bot_profile"])){
@@ -12,6 +14,10 @@
             $name = $_POST['name'];
             $email = $_POST['email'];
             $permissions = $_POST['role'];
-            echo $name." ".$email." ".$permissions;
+            $password = hash('sha256', $_POST['password']);
+            $time= date('Y-m-d H:i:s', time());
+            create_admin_user($name, $email, $password, $permissions, $time, $time);
+            header('Location: ' . $_SERVER["HTTP_REFERER"] );
+            exit;
         }
     }
