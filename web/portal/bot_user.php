@@ -1,9 +1,7 @@
 <?php 
     include "./includes/header.php";
-    // $user = retrieve_messenger_user($_GET['id']);
-    var_dump($_GET['id']);
-    // $messages =;
-    die();
+    $user = retrieve_messenger_user($_GET['id'], $db);
+    var_dump($user);
 ?>
     <div class="content">
         <div class="container-fluid">
