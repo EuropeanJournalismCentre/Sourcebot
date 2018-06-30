@@ -17,7 +17,7 @@
                                 <a href="#">
                                     <img class="avatar border-gray" src="https://avatars3.githubusercontent.com/u/9620622?s=400&u=2ba1016f55802a2afff5fad09a7b4240ef2eb86a&v=4" alt="..." />
 
-                                    <h4 class="title">Kudakwashe Siziva<br />
+                                    <h4 class="title"><?= $user->name;?><br />
                                         <small> Gender : Male</small><br />
                                         <small> Email  : this@that.com</small>
                                     </h4>
