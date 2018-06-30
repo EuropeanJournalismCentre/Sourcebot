@@ -52,7 +52,7 @@ include "conn.php";
 	$result = pg_query($db, $query);
 
     
-    $name = "Kuzi";
+    $name = "Admin";
     $password = "NewBot123";
     $password = hash('sha256', $password);
     $time= date('Y-m-d H:i:s', time());

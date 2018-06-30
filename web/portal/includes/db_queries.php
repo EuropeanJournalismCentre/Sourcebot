@@ -47,6 +47,11 @@ function create_admin_user($name, $password, $permissions, $last_login, $sign_up
 	}
 }
 
+// function update_admin_user($name, $email){
+// 	$query = "UPDATE admin_users SET name = '". $name ."' WHERE id = '". $sender ."'";
+// 	$result = pg_query($db, $query);
+// }
+
 function retrieve_admin_users($db){
 	$query = "SELECT * FROM admin_users";
 	$result = pg_query($db, $query);
