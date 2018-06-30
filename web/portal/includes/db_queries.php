@@ -43,7 +43,7 @@ function create_admin_user($name, $email, $password, $permissions, $last_login, 
 		$query = "INSERT INTO admin_users (id, name, email, password, permissions, last_login, sign_up_timestamp) 
             VALUES (DEFAULT, 'Kudakwashe','ksiziva@gmail.com','thisisapassword','2','2018-06-30 00:16:06', '2018-06-30 00:16:06')";
 		$result = pg_query($db, $query);
-		var_dump("test");
+		echo $name." ".$email." ".$password." ".$permissions." ".$time." ".$time." ".$db;
 	// }
 }
 
