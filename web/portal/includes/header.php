@@ -44,6 +44,12 @@
                     </a>
                 </li>
                 <li>
+                    <a href="bot_profile.php">
+                        <i class="pe-7s-user"></i>
+                        <p>Bot Profile</p>
+                    </a>
+                </li>
+                <li>
                     <a href="users.php">
                         <i class="pe-7s-note2"></i>
                         <p>Users' Table</p>
@@ -56,9 +62,9 @@
                     </a>
                 </li>
                 <li>
-                    <a href="diagnostics.php">
+                    <a href="#">
                         <i class="pe-7s-bell"></i>
-                        <p>Diagnostics</p>
+                        <p>Notifications</p>
                     </a>
                 </li>
                 <li class="active-pro">
@@ -123,7 +129,7 @@
                                 </p>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="bot_profile.php">Bot Profile</a></li>
+                                <li><a href="#">Action</a></li>
                                 <li><a href="#">Another action</a></li>
                                 <li><a href="#">Something</a></li>
                                 <li><a href="#">Another action</a></li>
