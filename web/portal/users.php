@@ -44,7 +44,7 @@
                                 <tr>
                                     <td><?= $value['id']; ?></td>
                                     <td><?= $value['name']; ?></td>
-                                    <td><?= $value['email']; ?></td>
+                                    <td><?= $value['gender']; ?></td>
                                 </tr>
                                 <?php } ?>
                                 </tbody>
