@@ -62,9 +62,9 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="diagnostics.php">
                         <i class="pe-7s-bell"></i>
-                        <p>Notifications</p>
+                        <p>Diagnostics</p>
                     </a>
                 </li>
                 <li class="active-pro">
