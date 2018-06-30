@@ -34,17 +34,20 @@ function create_messenger_error_log($message, $timestamp, $description, $type, $
 
 function create_admin_user($name, $email, $password, $permissions, $last_login, $sign_up_timestamp,$db){
 	//Check to see if the user is in the Database. If not add them to the db. 
-	// $query = "SELECT name FROM admin_users WHERE email= '" . $email . "'";
-	// $result = pg_query($db, $query);
+	$query = "SELECT name FROM admin_users WHERE email = '" . $email . "'";
+	$result = pg_query($db, $query);
 
-	// if (pg_num_rows($result) > 0){
-	// 	$data = ['message'=>'User already exists'];
-	// }else{
+	if (pg_num_rows($result) > 0){
+		$data = ['message' => 'User already exists'];
+	}else{
 		$query = "INSERT INTO admin_users (id, name, email, password, permissions, last_login, sign_up_timestamp) 
-			VALUES (DEFAULT, $name, $email, $password, $permissions, $last_login, $sign_up_timestamp)";
+			VALUES (DEFAULT, '" . $name . "','" . $email . "', '" . $password . "', '" . $permissions . "', '" . $last_login. "'
+			, '" . $sign_up_timestamp . "')";
 		$result = pg_query($db, $query);
-		
-	// }
+		$data = ['message' => 'User successfully added'];
+	}
+	header('Content-type: application/json');
+	echo json_encode( $data );
 }
 
 // function update_admin_user($name, $email){
