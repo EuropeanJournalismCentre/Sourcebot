@@ -16,8 +16,8 @@
             $permissions = $_POST['role'];
             $password = hash('sha256', $_POST['password']);
             $time = date('Y-m-d H:i:s', time());
-            $message = create_admin_user($name, $email, $password, $permissions, $time, $time, $db);
-            header("Location: admins.php?message=".urlencode($message));
+            create_admin_user($name, $email, $password, $permissions, $time, $time, $db);
+            header("Location: admins.php);
             exit;
         }
     }

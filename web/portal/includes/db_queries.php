@@ -44,10 +44,7 @@ function create_admin_user($name, $email, $password, $permissions, $last_login, 
 			VALUES (DEFAULT, '" . $name . "','" . $email . "', '" . $password . "', '" . $permissions . "', '" . $last_login. "'
 			, '" . $sign_up_timestamp . "')";
 		$result = pg_query($db, $query);
-		$data = ['message' => 'User successfully added'];
 	}
-	header('Content-type: application/json');
-	return json_encode( $data );
 }
 
 // function update_admin_user($name, $email){
