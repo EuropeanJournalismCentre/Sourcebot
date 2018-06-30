@@ -16,9 +16,8 @@
             $permissions = $_POST['role'];
             $password = hash('sha256', $_POST['password']);
             $time = date('Y-m-d H:i:s', time());
-            create_admin_user($name, $email, $password, $permissions, $time, $time, $db);
-            // header('Location: ' . $_SERVER["HTTP_REFERER"] );
-            // exit;
-            die();
+            $message = create_admin_user($name, $email, $password, $permissions, $time, $time, $db);
+            header("Location: admins.php?message=".urlencode($message));
+            exit;
         }
     }
