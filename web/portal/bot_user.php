@@ -45,7 +45,7 @@
                                     </div>
                                     <div id="<?= $value['id'];?>" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                                         <div class="card-body">
-                                        <?= $value['log_timestamp'];?>                                        
+                                        <?= $value['message'];?>                                        
                                     </div>
                                     </div>
                                 </div>
