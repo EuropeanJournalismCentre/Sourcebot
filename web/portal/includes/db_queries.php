@@ -19,10 +19,36 @@ function create_messenger_user($name, $sender_id, $last_message, $profile_pic_ur
 
 }
 
-function create_messenger_message_log($message, $log_timestamp, $description, $type, $db){
-	$query = "INSERT INTO messenger_message_log (id, message, log_timestamp, description, type) 
-	VALUES (DEFAULT, '" . $message . "', '" . $log_timestamp . "', '" . $description . "', '" . $type . "')";
+function retrieve_messenger_users($db){
+	//Check to see if the user is in the Database. If so retrieve No. of failed allempts. If not add them to it the db and retrive No. of failed attempts 
+	$query = "SELECT * FROM messenger_users";
 	$result = pg_query($db, $query);
+	if (pg_num_rows($result) > 0){
+		$users = pg_fetch_all($result);
+	}else {
+		$users = "No Results";
+	}
+	return $users;
+}
+function retrieve_messenger_user($facebook_id, $db){
+	//Check to see if the user is in the Database. If so retrieve No. of failed allempts. If not add them to it the db and retrive No. of failed attempts 
+	$query = "SELECT * FROM messenger_users WHERE facebook_id = '" . $facebook_id . "'";
+	$result = pg_query($db, $query);
+	$name = pg_fetch_row($result);
+	return $name;
+}
+
+// function create_messenger_message_log($message, $log_timestamp, $description, $type, $db){
+// 	$query = "INSERT INTO messenger_message_log (id, message, log_timestamp, description, type) 
+// 	VALUES (DEFAULT, '" . $message . "', '" . $log_timestamp . "', '" . $description . "', '" . $type . "')";
+// 	$result = pg_query($db, $query);
+// }
+
+function retrieve_messenger_messages($db){
+	$query = "SELECT * FROM messenger_message_log";
+	$result = pg_query($db, $query);
+	$name = pg_fetch_all($result);
+	return $name;
 }
 
 function create_messenger_error_log($message, $timestamp, $description, $type, $db){
@@ -32,30 +58,35 @@ function create_messenger_error_log($message, $timestamp, $description, $type, $
 	$result = pg_query($db, $query);
 }
 
-function create_admin_user($name, $password, $permissions, $last_login, $sign_up_timestamp){
+function create_admin_user($name, $email, $password, $permissions, $last_login, $sign_up_timestamp,$db){
 	//Check to see if the user is in the Database. If not add them to the db. 
-	$query = "SELECT name FROM admin_users WHERE id= '" . $admin_id . "'";
+	$query = "SELECT name FROM admin_users WHERE email = '" . $email . "'";
 	$result = pg_query($db, $query);
 
 	if (pg_num_rows($result) > 0){
-		$name = pg_fetch_result($result, 0, 0);
+		$data = ['message' => 'User already exists'];
 	}else{
-		$query = "INSERT INTO admin_users (name, password, permissions, last_login) 
-		VALUES ('" . $name . "','" . $password . "', '" . $permissions . "',
-		'" . $last_login . "', '" . $sign_up_timestamp . "')";
+		$query = "INSERT INTO admin_users (id, name, email, password, permissions, last_login, sign_up_timestamp) 
+			VALUES (DEFAULT, '" . $name . "','" . $email . "', '" . $password . "', '" . $permissions . "', '" . $last_login. "'
+			, '" . $sign_up_timestamp . "')";
 		$result = pg_query($db, $query);
 	}
 }
 
-function retrieve_admin_users(){
-	// $query = "SELECT * FROM admin_users";
-	// $result = pg_query($db, $query);
-	// if (pg_num_rows($result) > 0){
-	// 	$name = pg_fetch_assoc($result);
-	// }else {
-	// 	$name = "No Results";
-	// }
-	echo "Hey wassup";
+// function update_admin_user($name, $email){
+// 	$query = "UPDATE admin_users SET name = '". $name ."' WHERE id = '". $sender ."'";
+// 	$result = pg_query($db, $query);
+// }
+
+function retrieve_admin_users($db){
+	$query = "SELECT * FROM admin_users";
+	$result = pg_query($db, $query);
+	if (pg_num_rows($result) > 0){
+		$name = pg_fetch_all($result);
+	}else {
+		$name = "No Results";
+	}
+	return $name;
 
 }
 

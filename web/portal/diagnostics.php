@@ -1,18 +1,14 @@
 <?php 
     include "./includes/header.php";
-    if (isset($_GET["message"])){
-        $message = $_GET['message'];
-    }
     $admins = retrieve_admin_users($db);
-    ?>
+?>
     <div class="content">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <div class="card card-plain">
                         <div class="header">
-                            <h3><?= $message; ?></h3>
-                            <h4 class="title">Admins</h4>
+                            <h4 class="title">Messenger Error Log</h4>
                             <a href="add_admin.php" class="btn btn-info btn-fill pull-right">Create New User</a>
 
                         </div>

@@ -22,9 +22,11 @@ include "conn.php";
     
 	$query = "CREATE TABLE messenger_message_log(
         id SERIAL PRIMARY KEY,
-        message VARCHAR(1000)                   ,
-        log_timestamp TIMESTAMP                 ,
-        description VARCHAR(100)                ,
+        message VARCHAR(1000)                  ,
+        facebook_id VARCHAR(1000)              ,
+        ticket VARCHAR(1000)                   ,
+        log_timestamp TIMESTAMP                ,
+        description VARCHAR(100)               ,
         type VARCHAR(100) 				        
     );";
 	$result = pg_query($db, $query);
@@ -43,6 +45,7 @@ include "conn.php";
 	$query = "CREATE TABLE admin_users (
         id SERIAL PRIMARY KEY,
         name VARCHAR(100) 				NOT NULL,
+        email VARCHAR(100) 			    NOT NULL,
         password VARCHAR(100) 			NOT NULL,
         permissions int 				NOT NULL,
         last_login TIMESTAMP 			NOT NULL,
@@ -56,8 +59,8 @@ include "conn.php";
     $password = hash('sha256', $password);
     $time= date('Y-m-d H:i:s', time());
 
-    $query = "INSERT INTO admin_users (id, name, password, permissions, last_login, sign_up_timestamp) 
-            VALUES (DEFAULT, '" . $name . "','" . $password . "', 1, '" . $time . "', '" . $time . "')";
+    $query = "INSERT INTO admin_users (id, name, email, password, permissions, last_login, sign_up_timestamp) 
+            VALUES (DEFAULT, '" . $name . "','admin@sourcebot.com','" . $password . "', 1, '" . $time . "', '" . $time . "')";
 	$result = pg_query($db, $query);
 
     $query = "CREATE TABLE bot_messages (
