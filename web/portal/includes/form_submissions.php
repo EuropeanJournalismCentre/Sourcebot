@@ -21,10 +21,10 @@
             exit;
         }
     }elseif($_SERVER['REQUEST_METHOD'] === 'GET') {
-        if (isset($_GET['permissions'])) {
+        if (isset($_GET['permission'])) {
             var_dump($_GET['id']);
             die();
-            update_admin_role($_GET['id'], $_GET['permissions'], $db);
+            update_admin_role($_GET['id'], $_GET['permission'], $db);
             header('Location: ' . $_SERVER["HTTP_REFERER"] );
             exit;
         }
