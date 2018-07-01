@@ -38,16 +38,17 @@ function retrieve_messenger_user($facebook_id, $db){
 	return $name;
 }
 
-function create_messenger_message_log($message, $log_timestamp, $description, $type, $db){
-	$query = "INSERT INTO messenger_message_log (id, message, log_timestamp, description, type) 
-	VALUES (DEFAULT, '" . $message . "', '" . $log_timestamp . "', '" . $description . "', '" . $type . "')";
-	$result = pg_query($db, $query);
-}
+// function create_messenger_message_log($message, $log_timestamp, $description, $type, $db){
+// 	$query = "INSERT INTO messenger_message_log (id, message, log_timestamp, description, type) 
+// 	VALUES (DEFAULT, '" . $message . "', '" . $log_timestamp . "', '" . $description . "', '" . $type . "')";
+// 	$result = pg_query($db, $query);
+// }
 
-function retrieve_messenger_messages($message, $log_timestamp, $description, $type, $db){
-	$query = "INSERT INTO messenger_message_log (id, message, log_timestamp, description, type) 
-	VALUES (DEFAULT, '" . $message . "', '" . $log_timestamp . "', '" . $description . "', '" . $type . "')";
+function retrieve_messenger_messages($db){
+	$query = "SELECT * FROM messenger_message_log";
 	$result = pg_query($db, $query);
+	$name = pg_fetch_all($result);
+	return $name;
 }
 
 function create_messenger_error_log($message, $timestamp, $description, $type, $db){
