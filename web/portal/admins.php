@@ -38,9 +38,9 @@
                                     </td>
                                     <td>
                                         <?php if($value['permissions'] == 0){?>
-                                        <a href="" class="btn btn-success btn-xs">Activate</a>
+                                        <a href="edit_admins.php?id=<?= $value['id'];?>&permission=" class="btn btn-success btn-xs">Activate</a>
                                         <?php }else{?>
-                                        <a href="" class="btn btn-danger btn-xs">Deactivate</a>
+                                        <a href="edit_admins.php?id=<?= $value['id'];?>&permission=0" class="btn btn-danger btn-xs">Deactivate</a>
                                         <?php }?>   
                                         |
                                         <a href="" class="btn btn-default btn-xs">Edit</a>

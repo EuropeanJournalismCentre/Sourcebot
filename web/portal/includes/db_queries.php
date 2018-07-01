@@ -73,6 +73,25 @@ function create_admin_user($name, $email, $password, $permissions, $last_login, 
 	}
 }
 
+function update_admin_user($name, $email, $password, $permissions, $last_login, $sign_up_timestamp,$db){
+	//Check to see if the user is in the Database. If not add them to the db. 
+	$query = "SELECT name FROM admin_users WHERE email = '" . $email . "'";
+	$result = pg_query($db, $query);
+
+	if (pg_num_rows($result) > 0){
+		$data = ['message' => 'User already exists'];
+	}else{
+		$query = "INSERT INTO admin_users (id, name, email, password, permissions, last_login, sign_up_timestamp) 
+			VALUES (DEFAULT, '" . $name . "','" . $email . "', '" . $password . "', '" . $permissions . "', '" . $last_login. "'
+			, '" . $sign_up_timestamp . "')";
+		$result = pg_query($db, $query);
+	}
+}
+
+function update_admin_role($id, $permissions, $db){
+	$query = "UPDATE admin_users SET permissions = '". $permissions ."' id = '". $id ."'";
+	$result = pg_query($db, $query);
+}
 // function update_admin_user($name, $email){
 // 	$query = "UPDATE admin_users SET name = '". $name ."' WHERE id = '". $sender ."'";
 // 	$result = pg_query($db, $query);
