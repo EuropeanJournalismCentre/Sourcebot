@@ -21,14 +21,24 @@ function create_messenger_user($name, $sender_id, $last_message, $profile_pic_ur
 
 function retrieve_messenger_users($db){
 	//Check to see if the user is in the Database. If so retrieve No. of failed allempts. If not add them to it the db and retrive No. of failed attempts 
-	$query = "SELECT * FROM messenger_users";
+	// $query = "SELECT * FROM messenger_users";
+	// $result = pg_query($db, $query);
+	// if (pg_num_rows($result) > 0){
+	// 	$users = pg_fetch_all($result);
+	// }else {
+	// 	$users = "No Results";
+	// }
+	// return $users;
+	$query = "CREATE TABLE messenger_message_log(
+        id SERIAL PRIMARY KEY,
+        message VARCHAR(1000)                  ,
+        facebook_id VARCHAR(1000)              ,
+        ticket VARCHAR(1000)                   ,
+        log_timestamp TIMESTAMP                ,
+        description VARCHAR(100)               ,
+        type VARCHAR(100) 				        
+    );";
 	$result = pg_query($db, $query);
-	if (pg_num_rows($result) > 0){
-		$users = pg_fetch_all($result);
-	}else {
-		$users = "No Results";
-	}
-	return $users;
 }
 function retrieve_messenger_user($facebook_id, $db){
 	//Check to see if the user is in the Database. If so retrieve No. of failed allempts. If not add them to it the db and retrive No. of failed attempts 
@@ -39,6 +49,12 @@ function retrieve_messenger_user($facebook_id, $db){
 }
 
 function create_messenger_message_log($message, $log_timestamp, $description, $type, $db){
+	$query = "INSERT INTO messenger_message_log (id, message, log_timestamp, description, type) 
+	VALUES (DEFAULT, '" . $message . "', '" . $log_timestamp . "', '" . $description . "', '" . $type . "')";
+	$result = pg_query($db, $query);
+}
+
+function retrieve_messenger_messages($message, $log_timestamp, $description, $type, $db){
 	$query = "INSERT INTO messenger_message_log (id, message, log_timestamp, description, type) 
 	VALUES (DEFAULT, '" . $message . "', '" . $log_timestamp . "', '" . $description . "', '" . $type . "')";
 	$result = pg_query($db, $query);

@@ -22,9 +22,11 @@ include "conn.php";
     
 	$query = "CREATE TABLE messenger_message_log(
         id SERIAL PRIMARY KEY,
-        message VARCHAR(1000)                   ,
-        log_timestamp TIMESTAMP                 ,
-        description VARCHAR(100)                ,
+        message VARCHAR(1000)                  ,
+        facebook_id VARCHAR(1000)              ,
+        ticket VARCHAR(1000)                   ,
+        log_timestamp TIMESTAMP                ,
+        description VARCHAR(100)               ,
         type VARCHAR(100) 				        
     );";
 	$result = pg_query($db, $query);

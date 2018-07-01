@@ -2,7 +2,7 @@
     include "./includes/header.php";
     $facebook_id = $_GET['id'];
     $user = retrieve_messenger_user($facebook_id, $db);
-    var_dump($user);
+    $messages = ;
 ?>
     <div class="content">
         <div class="container-fluid">
