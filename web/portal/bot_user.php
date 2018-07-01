@@ -32,7 +32,7 @@
                         <div class="header">
                             <h4 class="title">Messages</h4>
                         </div>
-                        <div class="content">
+                        <div class="content" style="overflow:scroll;">
                             <div id="accordion">
                                 <?php foreach($messages as $key=>$value){ ?>
                                     <div class="card">
