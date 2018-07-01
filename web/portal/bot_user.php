@@ -34,7 +34,7 @@
                         </div>
                         <div class="content">
                             <div id="accordion">
-                                <?php foreach($users as $key=>$value){ ?>
+                                <?php foreach($messages as $key=>$value){ ?>
                                     <div class="card">
                                     <div class="card-header" id="headingTwo">
                                         <h5 class="mb-0">
