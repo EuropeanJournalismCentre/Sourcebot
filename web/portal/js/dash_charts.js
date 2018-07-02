@@ -33,10 +33,10 @@ var ctx2 = document.getElementById("myChart2");
 var myChart2 = new Chart(ctx2, {
     type: 'line',
     data: {
-        labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        labels: ["Jan", "Feb", "Mar", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"],
         datasets: [{
-            label: '# of weekly Users',
-            data: [12, 19, 3, 5, 2, 3, 7],
+            label: '# of monthly Users',
+            data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 7],
             borderColor: [
                 'rgb(29, 199, 234);',
                 'rgba(54, 162, 235, 1)',
