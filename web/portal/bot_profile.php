@@ -15,9 +15,9 @@
                         <div class="content">
                             <div class="author">
                                 <a href="#">
-                                    <img class="avatar border-gray" src="<?= $bot_details['bot_image'];?>" alt="..." />
+                                    <img class="avatar border-gray" src="<?= getenv(PROFILE_PIC_URL);?>" alt="..." />
 
-                                    <h4 class="title"><?php echo $bot_details['bot_name'];?><br />
+                                    <h4 class="title"><?= getenv(BOT_NAME);?><br />
                                     </h4>
                                 </a>
                             </div>
