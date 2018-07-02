@@ -133,10 +133,13 @@ function retrieve_bot_messages($db){
 
 }
 
-function update_bot_messages($name, $value, $last_update, $id, $db) {
+function truncate_bot_messages($db) {
+	$query = "TRUNCATE TABLE bot_messages";
+	$result = pg_query($db, $query);
+}
+
+function update_bot_messages($name, $value, $last_update, $db) {
 	$query = "INSERT INTO bot_messages (name, value, last_update) VALUES('". $name ."', '".$value."', '".$last_update."')";
-	var_dump($query);
-	die();
 	$result = pg_query($db, $query);
 }
 
