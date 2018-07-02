@@ -2,6 +2,9 @@
 
 /************************************************************ Database Functions ******************************************************************************************************************************************************************/
 
+/*
+* Queries for Messenger users
+*/
 function create_messenger_user($name, $sender_id, $last_message, $profile_pic_url, $locale, $timezone, $gender, $sign_up_timestamp,
 	$last_message_timestamp, $db){
 	//Check to see if the user is in the Database. If not add them to the db. 
@@ -38,12 +41,6 @@ function retrieve_messenger_user($facebook_id, $db){
 	return $name;
 }
 
-// function create_messenger_message_log($message, $log_timestamp, $description, $type, $db){
-// 	$query = "INSERT INTO messenger_message_log (id, message, log_timestamp, description, type) 
-// 	VALUES (DEFAULT, '" . $message . "', '" . $log_timestamp . "', '" . $description . "', '" . $type . "')";
-// 	$result = pg_query($db, $query);
-// }
-
 function retrieve_messenger_messages($facebook_id, $db){
 	$query = "SELECT * FROM messenger_message_log WHERE facebook_id = '".$facebook_id."' ORDER BY id DESC";
 	$result = pg_query($db, $query);
@@ -51,6 +48,9 @@ function retrieve_messenger_messages($facebook_id, $db){
 	return $name;
 }
 
+/*
+* Queries for error log
+*/
 function create_messenger_error_log($message, $timestamp, $description, $type, $db){
 	$query = "INSERT INTO messenger_error_log (id, message, timestamp, description, type) 
 	VALUES ('" . $message . "', '" . $timestamp . "', '" . $description . "', 
@@ -65,6 +65,9 @@ function retrieve_messenger_error_log($db){
 	return $errors;
 }
 
+/*
+* Queries for Admin users
+*/
 function create_admin_user($name, $email, $password, $permissions, $last_login, $sign_up_timestamp,$db){
 	//Check to see if the user is in the Database. If not add them to the db. 
 	$query = "SELECT name FROM admin_users WHERE email = '" . $email . "'";
@@ -90,10 +93,6 @@ function update_admin_role($id, $permissions, $db){
 	$query = "UPDATE admin_users SET permissions = '". $permissions ."' where id = '". $id ."'";
 	$result = pg_query($db, $query);
 }
-// function update_admin_user($name, $email){
-// 	$query = "UPDATE admin_users SET name = '". $name ."' WHERE id = '". $sender ."'";
-// 	$result = pg_query($db, $query);
-// }
 
 function retrieve_admin_users($db){
 	$query = "SELECT * FROM admin_users";
@@ -119,17 +118,9 @@ function retrieve_admin_user($id, $db){
 
 }
 
-function create_admin_user_log($admin_id, $admin_name, $admin_action, $permissions_level, $admin_action_timestamp, $db){
-	if ($admin_id && $admin_name && $admin_action && $permissions_level && $admin_action_timestamp && $db)
-	{
-		$query = "INSERT INTO admin_action_log (admin_id, admin_name, admin_action, permissions_level, 
-		admin_action_timestamp) 
-		VALUES ('" . $admin_id . "','" . $admin_name . "', '" . $admin_action . "', '" . $permissions_level . "', 
-		'" . $admin_action_timestamp . "')";
-		$result = pg_query($db, $query);
-	}
-}
-
+/*
+* Unused Queries
+*/
 function retrieve_name($sender, $db){
 	//Check to see if the user is in the Database. If so retrieve No. of failed allempts. If not add them to it the db and retrive No. of failed attempts 
 	$query = "SELECT name FROM users WHERE id= '" . $sender . "'";
