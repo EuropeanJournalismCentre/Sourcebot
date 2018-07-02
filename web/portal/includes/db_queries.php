@@ -125,12 +125,17 @@ function retrieve_bot_messages($db){
 	$query = "SELECT * FROM bot_messages Limit 7";
 	$result = pg_query($db, $query);
 	if (pg_num_rows($result) > 0){
-		$name = pg_fetch_all($result);
+		$messages = pg_fetch_all($result);
 	}else {
-		$name = "No Results";
+		$messages = "No Results";
 	}
-	return $name;
+	return $messages;
 
+}
+
+function update_bot_messages($name, $value, $last_update, $id, $db) {
+	$query = "UPDATE bot_messages SET name = '". $name ."', value = '".$value."', last_update = '".$last_update."' WHERE id = '". $id ."'";
+	$result = pg_query($db, $query);
 }
 
 

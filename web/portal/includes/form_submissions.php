@@ -35,7 +35,14 @@
             $big_feature_2 = $_POST['bf2'];
             $article_month = $_POST['article_month'];
             $article_date = $_POST['article_date'];
-            update_bot_messages($name, $email, $permissions, $id, $db);
+            $time = date('Y-m-d H:i:s', time());
+            update_bot_messages("HELP", $help, $time, "1", $db);
+            update_bot_messages("ABOUT", $about, $time, "2", $db);
+            update_bot_messages("FEATURE0", $big_feature_0, $time, "3", $db);
+            update_bot_message("FEATURE1", $big_feature_1, $time, "4", $db);
+            update_bot_messages("FEATURE2", $big_feature_2, $time, "5", $db);
+            update_bot_message("ARTICLEMONTH", $article_month, $time, "6", $db);
+            update_bot_messages("ARTICLEDATE", $article_date, $time, "7", $db);
             header('Location: ' . $_SERVER["HTTP_REFERER"] );
             exit;
     }elseif($_SERVER['REQUEST_METHOD'] === 'GET') {
