@@ -45,6 +45,9 @@
 <!--  Charts Plugin -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 
+<!-- Dashboard Charsts -->
+<script src="../js/dash_charts.js"></script>
+
 <!--  Notifications Plugin    -->
 <script src="assets/js/bootstrap-notify.js"></script>
 
