@@ -40,7 +40,7 @@
                                     <tbody>
                                     <tr>
                                         <td>Help</td>
-                                        <td><?= $bot_details['help'];?></td>
+                                        <td><?= $message[0]['value'];?></td>
                                     </tr>
                                     <tr>
                                         <td>About</td>
