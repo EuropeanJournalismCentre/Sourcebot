@@ -36,7 +36,7 @@ var myChart2 = new Chart(ctx2, {
         labels: ["Jan", "Feb", "Mar", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"],
         datasets: [{
             label: '# of monthly Users',
-            data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 7],
+            data: [12, 19, 3, 5, 90, 3, 12, 0, 3, 5, 2, 7],
             borderColor: [
                 'rgb(29, 199, 234);',
                 'rgba(54, 162, 235, 1)',
