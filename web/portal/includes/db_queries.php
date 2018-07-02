@@ -122,7 +122,7 @@ function retrieve_admin_user($id, $db){
 * Bot Messages queries
 */
 function retrieve_bot_messages($db){
-	$query = "SELECT * FROM admin_users";
+	$query = "SELECT * FROM bot_messages";
 	$result = pg_query($db, $query);
 	if (pg_num_rows($result) > 0){
 		$name = pg_fetch_row($result);
