@@ -46,7 +46,9 @@
             update_bot_messages("ARTICLEDATE", $article_date, $time, $db);
             header('Location: ' . $_SERVER["HTTP_REFERER"] );
             exit;
-    }elseif($_SERVER['REQUEST_METHOD'] === 'GET') {
+        }
+    }
+    elseif($_SERVER['REQUEST_METHOD'] === 'GET') {
         if (isset($_GET['permission'])) {
             var_dump("hey wassup");
             die();
@@ -55,4 +57,3 @@
             exit;
         }
     }
-}
