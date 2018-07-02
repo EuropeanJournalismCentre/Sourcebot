@@ -1,7 +1,6 @@
 <?php 
     include "./includes/header.php";
     $errors = retrieve_messenger_error_log($db);
-    var_dump($errors);
 ?>
     <div class="content">
         <div class="container-fluid">
