@@ -1,13 +1,10 @@
-/*
- * Users statistics - Weekly
- */
-var ctx1 = document.getElementById("users_weekely");
-var users_weekly = new Chart(ctx1, {
+var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
     type: 'line',
     data: {
         labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
         datasets: [{
-            label: '# of Users',
+            label: '# of weekly Users',
             data: [12, 19, 3, 5, 2, 3, 7],
             borderColor: [
                 'rgba(255,99,132,1)',
@@ -32,16 +29,13 @@ var users_weekly = new Chart(ctx1, {
     }
 });
 
-/*
- * Users statistics - Monthly
- */
-var ctx = document.getElementById("users_monthly");
-var users_monthly = new Chart(ctx, {
+var ctx2 = document.getElementById("myChart2");
+var myChart2 = new Chart(ctx2, {
     type: 'line',
     data: {
         labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
         datasets: [{
-            label: '# of Users',
+            label: '# of weekly Users',
             data: [12, 19, 3, 5, 2, 3, 7],
             borderColor: [
                 'rgba(255,99,132,1)',
