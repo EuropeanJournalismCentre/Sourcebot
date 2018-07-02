@@ -3,7 +3,6 @@
     $facebook_id = $_GET['id'];
     $user = retrieve_messenger_user($facebook_id, $db);
     $messages = retrieve_messenger_messages($db);
-    var_dump($user);
 ?>
     <div class="content">
         <div class="container-fluid">
