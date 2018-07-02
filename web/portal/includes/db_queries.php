@@ -45,6 +45,8 @@ function retrieve_messenger_messages($facebook_id, $db){
 	$query = "SELECT * FROM messenger_message_log WHERE facebook_id = '".$facebook_id."' ORDER BY id DESC";
 	$result = pg_query($db, $query);
 	$name = pg_fetch_all($result);
+	var_dump($name);
+	die();
 	return $name;
 }
 
