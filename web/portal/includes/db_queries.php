@@ -76,6 +76,8 @@ function create_admin_user($name, $email, $password, $permissions, $last_login, 
 function update_admin_user($name, $email, $permissions, $id, $db){
 	//Check to see if the user is in the Database. If not add them to the db. 
 	$query = "UPDATE admin_users SET name = $name, email = $email, permissions = '". $permissions ."' WHERE id = '". $id ."'";
+	var_dump($query);
+	die();
 	$result = pg_query($db, $query);
 }
 
