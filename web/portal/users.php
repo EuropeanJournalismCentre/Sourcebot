@@ -20,22 +20,15 @@
                                     <th>More...</th>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td width="45px"><img src="https://images.pexels.com/photos/375880/pexels-photo-375880.jpeg?auto=compress&cs=tinysrgb&h=350" class="borders avatar-profile"></td>
-                                        <td>Kudakwashe</td>
-                                        <td>Male</td>
-                                        <td><a href="#" class="btn btn-default">View more...</a></td>
-                                    </tr>
                                     <?php foreach($users as $key=>$value){ ?>
-                                <tr>
-                                    <td><?= $value['id']; ?></td>
-                                    <td width="45px"><img src="<?= $value['profile_pic_url'];?>" class="borders avatar-profile"></td>
-                                    <td><?= $value['name']; ?></td>
-                                    <td><?= ucwords($value['gender']); ?></td>
-                                    <td><a href="bot_user.php?id=<?= $value['facebook_id']?>" class="btn btn-default">View more...</a></td>
-                                </tr>
-                                <?php } ?>
+                                        <tr>
+                                            <td><?= $value['id']; ?></td>
+                                            <td width="45px"><img src="<?= $value['profile_pic_url'];?>" class="borders avatar-profile"></td>
+                                            <td><?= $value['name']; ?></td>
+                                            <td><?= ucwords($value['gender']); ?></td>
+                                            <td><a href="bot_user.php?id=<?= $value['facebook_id']?>" class="btn btn-default">View more...</a></td>
+                                        </tr>
+                                    <?php } ?>
                                 </tbody>
                             </table>
 

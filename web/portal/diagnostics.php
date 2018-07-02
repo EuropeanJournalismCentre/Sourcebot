@@ -24,7 +24,15 @@
                                 </thead>
                                 <tbody>
                                 <?php foreach($errors as $key=>$value){ ?>
-                                
+                                    <tr>
+                                        <td><?= $value['id']; ?></td>
+                                        <td><?= $value['message']; ?></td>
+                                        <td><?= $value['error_code'];?></td>
+                                        <td><?= $value['error_subcode'];?></td>
+                                        <td><?= $value['error_type'];?></td>
+                                        <td><?= $value['error_timestamp'];?></td>
+                                        <td><?= $value['fbtrace_id'];?></td>
+                                    </tr>
                                 <?php } ?>
                                 </tbody>
                             </table>
