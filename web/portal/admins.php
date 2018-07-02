@@ -34,7 +34,7 @@
                                     <td><?= $value['email']; ?></td>
                                     <td><?= $value['last_login']; ?></td>
                                     <td>
-                                        <?= ($value['permissions'] == 0 ? 'Deactivated' : 'Active')?>
+                                        <?= ($value['permissions'] > 0 ? 'Deactivated' : 'Active')?>
                                     </td>
                                     <td>
                                         <?php if($value['permissions'] == 0){?>
