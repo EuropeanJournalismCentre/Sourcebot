@@ -19,6 +19,14 @@
             create_admin_user($name, $email, $password, $permissions, $time, $time, $db);
             header('Location: ' . $_SERVER["HTTP_REFERER"] );
             exit;
+        } elseif(isset($_POST["update_admin"])){
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $permissions = $_POST['role'];
+            $id = $_POST['id'];
+            update_admin_user($name, $email, $permissions, $id, $db);
+            header('Location: ' . $_SERVER["HTTP_REFERER"] );
+            exit;
         }
     }elseif($_SERVER['REQUEST_METHOD'] === 'GET') {
         if (isset($_GET['permission'])) {

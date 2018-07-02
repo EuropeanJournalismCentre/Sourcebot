@@ -1,7 +1,6 @@
 <?php 
     include "./includes/header.php";
     $admin = retrieve_admin_user($_GET['id'], $db);
-    var_dump(retrieve_admin_user($_GET['id'], $db));
 ?>
 
     <div class="content">
@@ -40,7 +39,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <input type="hidden" name="add_admin" value="yes"> 
+                                <input type="hidden" name="update_admin" value="yes">
+                                <input type="hidden" name="id" value="<?= $admin[0];?>"> 
                                 <button type="submit" class="btn btn-info btn-fill pull-right">Update Admin</button>
                                 <div class="clearfix"></div>
                             </form>
