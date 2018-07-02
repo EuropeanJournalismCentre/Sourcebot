@@ -40,7 +40,7 @@
                                     <tbody>
                                     <tr>
                                         <td>Help</td>
-                                        <td><?= $message[0]['value'];?></td>
+                                        <td><?= $messages[0]['value'];?></td>
                                     </tr>
                                     <tr>
                                         <td>About</td>
