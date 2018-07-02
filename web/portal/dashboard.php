@@ -10,7 +10,7 @@
                             <p class="category">24 Hours performance</p>
                         </div>
                         <div class="content">
-                            <canvas id="myChart" width="400" height="400"></canvas>
+                        <canvas id="line-chart" height="158" width="417" style="width: 417px; height: 158px;"></canvas>
                             <div class="footer">
                                 <div class="legend">
                                     <i class="fa fa-circle text-info"></i> Active
@@ -201,7 +201,7 @@ var polarData = [
 
 
 window.onload = function(){
-	var trendingLineChart = document.getElementById("myChart").getContext("2d");
+	var trendingLineChart = document.getElementById("trending-line-chart").getContext("2d");
 	window.trendingLineChart = new Chart(trendingLineChart).Line(data, {		
 		scaleShowGridLines : true,///Boolean - Whether grid lines are shown across the chart		
 		scaleGridLineColor : "rgba(255,255,255,0.4)",//String - Colour of the grid lines		
