@@ -40,23 +40,23 @@
                                     <tbody>
                                     <tr>
                                         <td>Help</td>
-                                        <td><?= $messages[0]['value'];?> - last updated on <?= $messages[0]['last_updated'];?></td>
+                                        <td><?= $messages[0]['value'];?> - last updated on <?= $messages[0]['last_update'];?></td>
                                     </tr>
                                     <tr>
                                         <td>About</td>
-                                        <td><?= $messages[1]['value'];?> - last updated on <?= $messages[1]['last_updated'];?></td>
+                                        <td><?= $messages[1]['value'];?> - last updated on <?= $messages[1]['last_update'];?></td>
                                     </tr>
                                     <tr>
                                         <td>Feature [0]</td>
-                                        <td><?= $messages[2]['value'];?> - last updated on <?= $messages[2]['last_updated'];?></td>
+                                        <td><?= $messages[2]['value'];?> - last updated on <?= $messages[2]['last_update'];?></td>
                                     </tr>
                                     <tr>
                                         <td>Feature [1]</td>
-                                        <td><?= $messages[3]['value'];?> - last updated on <?= $messages[3]['last_updated'];?></td>
+                                        <td><?= $messages[3]['value'];?> - last updated on <?= $messages[3]['last_update'];?></td>
                                     </tr>
                                     <tr>
                                         <td>Feature [2]</td>
-                                        <td><?= $messages[4]['value'];?> - last updated on <?= $messages[4]['last_updated'];?></td>
+                                        <td><?= $messages[4]['value'];?> - last updated on <?= $messages[4]['last_update'];?></td>
                                     </tr>
                                     <tr>
                                         <td>Article Month</td>
