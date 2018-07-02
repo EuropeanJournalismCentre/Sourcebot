@@ -25,7 +25,7 @@
             $permissions = $_POST['role'];
             $id = $_POST['id'];
             update_admin_user($name, $email, $permissions, $id, $db);
-            header('Location:javascript://history.go(-1)');
+            header('Location: ' . $_SERVER["HTTP_REFERER"] );
             exit;
         }
     }elseif($_SERVER['REQUEST_METHOD'] === 'GET') {
