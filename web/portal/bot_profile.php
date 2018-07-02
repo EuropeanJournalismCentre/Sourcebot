@@ -8,9 +8,9 @@
  ?>
     <div class="content">
 
-        <div class="container-fluid">
-            <div class="row">
+        <div class="container-fluid">            
             <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button>
+            <div class="row">
                 <div class="col-md-4">
                     <div class="card card-user">
                         <div class="image">
