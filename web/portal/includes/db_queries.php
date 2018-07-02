@@ -119,6 +119,22 @@ function retrieve_admin_user($id, $db){
 }
 
 /*
+* Bot Messages queries
+*/
+function retrieve_bot_messages($db){
+	$query = "SELECT * FROM admin_users";
+	$result = pg_query($db, $query);
+	if (pg_num_rows($result) > 0){
+		$name = pg_fetch_row($result);
+	}else {
+		$name = "No Results";
+	}
+	return $name;
+
+}
+
+
+/*
 * Unused Queries
 */
 function retrieve_name($sender, $db){

@@ -43,7 +43,7 @@
 <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 
 <!--  Charts Plugin -->
-<script src="assets/js/chartist.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 
 <!--  Notifications Plugin    -->
 <script src="assets/js/bootstrap-notify.js"></script>

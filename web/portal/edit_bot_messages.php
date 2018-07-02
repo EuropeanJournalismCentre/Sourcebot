@@ -18,7 +18,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Bot Help</label>
-                                        <input type="text" name="help" class="form-control" placeholder="Help for using the bot" required>
+                                        <input type="text" name="help" class="form-control" required>
                                     </div>
                                 </div>
                             </div>
@@ -27,7 +27,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>About Bot</label>
-                                        <input type="text" name="about" class="form-control" placeholder="About Bot" required>
+                                        <input type="text" name="about" class="form-control" required>
                                     </div>
                                 </div>
                             </div>    
@@ -35,7 +35,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label>Bot Feature 0</label>
-                                            <input type="text" name="bf0" class="form-control" placeholder="Bot Feature 0" required>
+                                            <input type="text" name="bf0" class="form-control" required>
                                         </div>
                                     </div>
                                 </div>
@@ -44,7 +44,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label>Bor feature 1</label>
-                                            <input type="text" name="bf1" class="form-control" placeholder="Bot Feature 1" required>
+                                            <input type="text" name="bf1" class="form-control" required>
                                         </div>
                                     </div>
                                 </div>
@@ -53,7 +53,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label>Bor feature 2</label>
-                                            <input type="text" name="bf2" class="form-control" placeholder="Bot Feature 2" required>
+                                            <input type="text" name="bf2" class="form-control" required>
                                         </div>
                                     </div>
                                 </div>
@@ -62,21 +62,20 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label>Article Month</label>
-                                            <input type="text" name="article_month" class="form-control" placeholder="Bot image url" required>
+                                            <input type="text" name="article_month" class="form-control" required>
                                         </div>
                                     </div>
                                 </div>
-
-
 
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label>Article Date</label>
-                                            <input type="text" name="article_date" class="form-control" placeholder="Bot image url" required>
+                                            <input type="text" name="article_date" class="form-control" required>
                                         </div>
                                     </div>
                                 </div>
+                                <input type="hidden" name="bot_messages" value="yes">
                                 <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button>
                                 <div class="clearfix"></div>
                             </form>

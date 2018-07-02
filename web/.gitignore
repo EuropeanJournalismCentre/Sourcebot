@@ -1,4 +1,4 @@
 vendor/
 .env
-portal/includes/db.php
+web/portal/includes/db.php
 

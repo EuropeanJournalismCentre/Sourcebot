@@ -27,7 +27,17 @@
             update_admin_user($name, $email, $permissions, $id, $db);
             header('Location: ' . $_SERVER["HTTP_REFERER"] );
             exit;
-        }
+        } elseif(isset($_POST["bot_messages"])){
+            $help = $_POST['help'];
+            $about = $_POST['about'];
+            $big_feature_0 = $_POST['bf0'];
+            $big_feature_1 = $_POST['bf1'];
+            $big_feature_2 = $_POST['bf2'];
+            $article_month = $_POST['article_month'];
+            $article_date = $_POST['article_date'];
+            update_bot_messages($name, $email, $permissions, $id, $db);
+            header('Location: ' . $_SERVER["HTTP_REFERER"] );
+            exit;
     }elseif($_SERVER['REQUEST_METHOD'] === 'GET') {
         if (isset($_GET['permission'])) {
             update_admin_role($_GET['id'], $_GET['permission'], $db);
