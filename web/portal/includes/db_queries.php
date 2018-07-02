@@ -91,6 +91,8 @@ function update_admin_user($name, $email, $permissions, $id, $db){
 
 function update_admin_role($id, $permissions, $db){
 	$query = "UPDATE admin_users SET permissions = '". $permissions ."' where id = '". $id ."'";
+	var_dump($query);
+	die();
 	$result = pg_query($db, $query);
 }
 
