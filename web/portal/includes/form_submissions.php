@@ -40,9 +40,9 @@
             update_bot_messages("HELP", $help, $time, $db);
             update_bot_messages("ABOUT", $about, $time,$db);
             update_bot_messages("FEATURE0", $big_feature_0, $time, $db);
-            update_bot_message("FEATURE1", $big_feature_1, $time, $db);
+            update_bot_messages("FEATURE1", $big_feature_1, $time, $db);
             update_bot_messages("FEATURE2", $big_feature_2, $time, $db);
-            update_bot_message("ARTICLEMONTH", $article_month, $time, $db);
+            update_bot_messages("ARTICLEMONTH", $article_month, $time, $db);
             update_bot_messages("ARTICLEDATE", $article_date, $time, $db);
             header('Location: ' . $_SERVER["HTTP_REFERER"] );
             exit;
