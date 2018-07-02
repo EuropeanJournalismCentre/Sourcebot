@@ -18,13 +18,13 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Full Name</label>
-                                            <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+                                            <input type="text" name="name" class="form-control" value="<?= $admin[1];?>" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Email</label>
-                                            <input type="email"  name="email" class="form-control" placeholder="Email" required>
+                                            <input type="email"  name="email" class="form-control" value="<?= $admin[2];?>" required>
                                         </div>
                                     </div>
                                 </div>
@@ -32,22 +32,16 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>Password</label>
-                                            <input type="password"  name="password" class="form-control" placeholder="Password" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
                                             <label>Role</label>
                                             <select class="form-control" name="role">
-                                                <option value="2">Super Admin</option>
                                                 <option value="1">General Admin</option>
+                                                <option value="2">Super Admin</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
                                 <input type="hidden" name="add_admin" value="yes"> 
-                                <button type="submit" class="btn btn-info btn-fill pull-right">Add Admin</button>
+                                <button type="submit" class="btn btn-info btn-fill pull-right">Update Admin</button>
                                 <div class="clearfix"></div>
                             </form>
                         </div>
