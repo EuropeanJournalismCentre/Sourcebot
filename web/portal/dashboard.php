@@ -125,3 +125,4 @@
         </div>
     </div>
 <?php include "./includes/footer.php"; ?>
+<script src="./js/dash_charts.js"></script>
