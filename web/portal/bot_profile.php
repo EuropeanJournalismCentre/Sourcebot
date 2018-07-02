@@ -1,7 +1,6 @@
 <?php
     include "./includes/header.php";
     $messages = retrieve_bot_messages($db);
-    var_dump($messages);
  ?>
 
     <div class="content">
