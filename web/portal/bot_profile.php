@@ -10,6 +10,7 @@
 
         <div class="container-fluid">
             <div class="row">
+            <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button>
                 <div class="col-md-4">
                     <div class="card card-user">
                         <div class="image">
