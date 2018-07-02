@@ -134,7 +134,9 @@ function retrieve_bot_messages($db){
 }
 
 function update_bot_messages($name, $value, $last_update, $id, $db) {
-	$query = "UPDATE bot_messages SET name = '". $name ."', value = '".$value."', last_update = '".$last_update."' WHERE id = '". $id ."'";
+	$query = "INSERT INTO bot_messages (name, value, last_update) VALUES('". $name ."', '".$value."', '".$last_update."')";
+	var_dump($query);
+	die();
 	$result = pg_query($db, $query);
 }
 
