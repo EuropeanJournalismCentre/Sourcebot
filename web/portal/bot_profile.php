@@ -6,8 +6,9 @@
 
     include "./includes/header.php";
  ?>
+    <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button>
+
     <div class="content">
-        <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button>
         <div class="container-fluid">            
             <div class="row">
                 <div class="col-md-4">
