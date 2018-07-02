@@ -38,12 +38,12 @@
                                     </td>
                                     <td>
                                         <?php if($value['permissions'] == 0){?>
-                                        <a href="./includes/form_submissions.php?id=<?= $value['id'];?>&permission=2" class="btn btn-success btn-xs">Activate</a>
+                                        <a href="./includes/form_submissions.php?id=<?= $value['id'];?>&permission=1" class="btn btn-success btn-xs">Activate</a>
                                         <?php }else{?>
                                         <a href="./includes/form_submissions.php?id=<?= $value['id'];?>&permission=0" class="btn btn-danger btn-xs">Deactivate</a>
                                         <?php }?>   
                                         |
-                                        <a href="" class="btn btn-default btn-xs">Edit</a>
+                                        <a href="edit_admins.php?id=<?= $value['id'];?>" class="btn btn-default btn-xs">Edit</a>
                                     </td>
                                 </tr>
                                 <?php } ?>

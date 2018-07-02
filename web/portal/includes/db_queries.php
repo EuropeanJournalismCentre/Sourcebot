@@ -109,6 +109,18 @@ function retrieve_admin_users($db){
 
 }
 
+function retrieve_admin_user($id, $db){
+	$query = "SELECT * FROM admin_users where id = '" . $id . "'";
+	$result = pg_query($db, $query);
+	if (pg_num_rows($result) > 0){
+		$name = pg_fetch_row($result);
+	}else {
+		$name = "No Results";
+	}
+	return $name;
+
+}
+
 function create_admin_user_log($admin_id, $admin_name, $admin_action, $permissions_level, $admin_action_timestamp, $db){
 	if ($admin_id && $admin_name && $admin_action && $permissions_level && $admin_action_timestamp && $db)
 	{
