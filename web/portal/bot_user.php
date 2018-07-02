@@ -16,7 +16,7 @@
                         <div class="content">
                             <div class="author">
                                 <a href="#">
-                                    <img class="avatar border-gray" src="<?= $user[2];?>"  />
+                                    <img class="avatar border-gray" src="<?= $user[3];?>"  />
 
                                     <h4 class="title"><?= $user[1];?><br />
                                         <small> Gender : <?= ucwords($user[6]);?></small><br />
