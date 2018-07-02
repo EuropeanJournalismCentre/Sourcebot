@@ -60,11 +60,11 @@
                                     </tr>
                                     <tr>
                                         <td>Article Month</td>
-                                        <td><?= $messages[5]['value'];?> - last updated on <?= $messages[5]['last_updated'];?></td>
+                                        <td><?= $messages[5]['value'];?> - last updated on <?= $messages[5]['last_update'];?></td>
                                     </tr>
                                     <tr>
                                         <td>Article Date</td>
-                                        <td><?= $messages[6]['value'];?> - last updated on <?= $messages[6]['last_updated'];?></td>
+                                        <td><?= $messages[6]['value'];?> - last updated on <?= $messages[6]['last_update'];?></td>
                                     </tr>
                                     </tbody>
                                 </table>
