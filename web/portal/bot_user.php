@@ -16,7 +16,7 @@
                         <div class="content">
                             <div class="author">
                                 <a href="#">
-                                    <img class="avatar border-gray" src="https://avatars3.githubusercontent.com/u/9620622?s=400&u=2ba1016f55802a2afff5fad09a7b4240ef2eb86a&v=4" alt="..." />
+                                    <img class="avatar border-gray" src="<?= $user[2];?>"  />
 
                                     <h4 class="title"><?= $user[1];?><br />
                                         <small> Gender : <?= ucwords($user[6]);?></small><br />
