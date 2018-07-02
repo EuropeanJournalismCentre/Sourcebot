@@ -1,6 +1,6 @@
 <?php 
     include "./includes/header.php";
-    $errors = rretrieve_messenger_error_log($db);
+    $errors = retrieve_messenger_error_log($db);
     var_dump($errors);
 ?>
     <div class="content">
