@@ -40,31 +40,31 @@
                                     <tbody>
                                     <tr>
                                         <td>Help</td>
-                                        <td><?= $messages[0]['value'];?></td>
+                                        <td><?= $messages[0]['value'];?> - last updated on <?= $messages[0]['last_updated'];?></td>
                                     </tr>
                                     <tr>
                                         <td>About</td>
-                                        <td><?= $bot_details['about'];?></td>
+                                        <td><?= $messages[1]['value'];?> - last updated on <?= $messages[1]['last_updated'];?></td>
                                     </tr>
                                     <tr>
                                         <td>Feature [0]</td>
-                                        <td><?= $bot_details['about'];?></td>
+                                        <td><?= $messages[2]['value'];?> - last updated on <?= $messages[2]['last_updated'];?></td>
                                     </tr>
                                     <tr>
                                         <td>Feature [1]</td>
-                                        <td><?= $bot_details['about'];?></td>
+                                        <td><?= $messages[3]['value'];?> - last updated on <?= $messages[3]['last_updated'];?></td>
                                     </tr>
                                     <tr>
                                         <td>Feature [2]</td>
-                                        <td><?= $bot_details['about'];?></td>
+                                        <td><?= $messages[4]['value'];?> - last updated on <?= $messages[4]['last_updated'];?></td>
                                     </tr>
                                     <tr>
                                         <td>Article Month</td>
-                                        <td><?= $bot_details['about'];?></td>
+                                        <td><?= $messages[5]['value'];?> - last updated on <?= $messages[5]['last_updated'];?></td>
                                     </tr>
                                     <tr>
                                         <td>Article Date</td>
-                                        <td><?= $bot_details['about'];?></td>
+                                        <td><?= $messages[6]['value'];?> - last updated on <?= $messages[6]['last_updated'];?></td>
                                     </tr>
                                     </tbody>
                                 </table>
