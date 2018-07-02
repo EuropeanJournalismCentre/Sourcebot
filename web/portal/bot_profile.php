@@ -6,7 +6,6 @@
 
     include "./includes/header.php";
  ?>
-    <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button>
 
     <div class="content">
         <div class="container-fluid">            
@@ -32,6 +31,7 @@
                     <div class="card">
                         <div class="header">
                             <h4 class="title">Auto Responses</h4>
+                            <a href="#" class="btn btn-info btn-fill pull-right">Update Profile</a>
                         </div>
                         <div class="content">
                             <div class="content table-responsive table-full-width">
