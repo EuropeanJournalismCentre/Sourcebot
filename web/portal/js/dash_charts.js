@@ -38,7 +38,7 @@ var myChart2 = new Chart(ctx2, {
             label: '# of weekly Users',
             data: [12, 19, 3, 5, 2, 3, 7],
             borderColor: [
-                'rgba(255,99,132,1)',
+                'rgb(29, 199, 234);',
                 'rgba(54, 162, 235, 1)',
                 'rgba(255, 206, 86, 1)',
                 'rgba(75, 192, 192, 1)',
