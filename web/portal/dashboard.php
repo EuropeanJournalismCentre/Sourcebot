@@ -10,7 +10,7 @@
                             <p class="category">24 Hours performance</p>
                         </div>
                         <div class="content">
-                            <canvas id="users_weekly" width="400" height="400"></canvas>
+                            <canvas id="myChart" width="400" height="400"></canvas>
                             <div class="footer">
                                 <div class="legend">
                                     <i class="fa fa-circle text-info"></i> Active
@@ -28,7 +28,7 @@
                             <p class="category">24 Hours performance</p>
                         </div>
                         <div class="content">
-                            <canvas id="users_monthly" width="400" height="400"></canvas>
+                            <div id="chartHours" class="ct-chart"></div>
                             <div class="footer">
                                 <div class="legend">
                                     <i class="fa fa-circle text-info"></i> Active
@@ -125,4 +125,35 @@
         </div>
     </div>
 <?php include "./includes/footer.php"; ?>
-<script src="./js/dash_charts.js"></script>
+<script>
+var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        datasets: [{
+            label: '# of Users',
+            data: [12, 19, 3, 5, 2, 3, 7],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
