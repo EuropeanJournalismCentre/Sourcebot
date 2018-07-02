@@ -32,7 +32,7 @@
                                     <td><?= $value['id']; ?></td>
                                     <td width="45px"><img src="<?= $value['profile_pic_url'];?>" class="borders avatar-profile"></td>
                                     <td><?= $value['name']; ?></td>
-                                    <td><?= $value['gender']; ?></td>
+                                    <td><?= ucwords($value['gender']); ?></td>
                                     <td><a href="bot_user.php?id=<?= $value['facebook_id']?>" class="btn btn-default">View more...</a></td>
                                 </tr>
                                 <?php } ?>
