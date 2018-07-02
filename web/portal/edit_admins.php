@@ -1,6 +1,6 @@
 <?php 
     include "./includes/header.php";
-    // $admin = retrieve_admin_user($_GET['id'], $db);
+    $admin = retrieve_admin_user($_GET['id'], $db);
     var_dump(retrieve_admin_user($_GET['id'], $db));
 ?>
 
