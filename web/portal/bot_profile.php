@@ -100,6 +100,26 @@
                                         <td>About</td>
                                         <td><?= $bot_details['about'];?></td>
                                     </tr>
+                                    <tr>
+                                        <td>Feature [0]</td>
+                                        <td><?= $bot_details['about'];?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Feature [1]</td>
+                                        <td><?= $bot_details['about'];?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Feature [2]/td>
+                                        <td><?= $bot_details['about'];?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Article Month</td>
+                                        <td><?= $bot_details['about'];?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Article Date</td>
+                                        <td><?= $bot_details['about'];?></td>
+                                    </tr>
                                     </tbody>
                                 </table>
 
