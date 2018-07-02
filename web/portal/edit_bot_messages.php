@@ -15,7 +15,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label>Bot Name</label>
+                                            <label>Bot Feature 0</label>
                                             <input type="text" name="bot_name" class="form-control" placeholder="Bot Name" required>
                                         </div>
                                     </div>
@@ -24,12 +24,41 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label>Bot Image</label>
+                                            <label>Bor feature 1</label>
                                             <input type="text" name="bot_image" class="form-control" placeholder="Bot image url" required>
                                         </div>
                                     </div>
                                 </div>
 
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Bor feature 2</label>
+                                            <input type="text" name="bot_image" class="form-control" placeholder="Bot image url" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Article Month</label>
+                                            <input type="text" name="bot_image" class="form-control" placeholder="Bot image url" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Article Date</label>
+                                            <input type="text" name="bot_image" class="form-control" placeholder="Bot image url" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
