@@ -1,8 +1,8 @@
 /*
  * Users statistics - Weekly
  */
-var ctx = document.getElementById("users_weekely");
-var users_weekly = new Chart(ctx, {
+var ctx1 = document.getElementById("users_weekely");
+var users_weekly = new Chart(ctx1, {
     type: 'line',
     data: {
         labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
