@@ -58,6 +58,13 @@ function create_messenger_error_log($message, $timestamp, $description, $type, $
 	$result = pg_query($db, $query);
 }
 
+function retrieve_messenger_error_log($db){
+	$query = "SELECT * FROM messenger_error_log";
+	$result = pg_query($db, $query);
+	$errors = pg_fetch_all($result);
+	return $errors;
+}
+
 function create_admin_user($name, $email, $password, $permissions, $last_login, $sign_up_timestamp,$db){
 	//Check to see if the user is in the Database. If not add them to the db. 
 	$query = "SELECT name FROM admin_users WHERE email = '" . $email . "'";
