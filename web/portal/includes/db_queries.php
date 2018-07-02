@@ -125,7 +125,7 @@ function retrieve_bot_messages($db){
 	$query = "SELECT * FROM bot_messages";
 	$result = pg_query($db, $query);
 	if (pg_num_rows($result) > 0){
-		$name = pg_fetch_row($result);
+		$name = pg_fetch_all($result);
 	}else {
 		$name = "No Results";
 	}
