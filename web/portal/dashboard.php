@@ -28,7 +28,7 @@
                             <p class="category">24 Hours performance</p>
                         </div>
                         <div class="content">
-                            <canvas id="myChart" width="400" height="400"></canvas>
+                            <canvas id="myChart2" width="400" height="400"></canvas>
                             <div class="footer">
                                 <div class="legend">
                                     <i class="fa fa-circle text-info"></i> Active
