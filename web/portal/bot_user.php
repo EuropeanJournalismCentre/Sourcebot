@@ -1,9 +1,9 @@
 <?php 
     include "./includes/header.php";
     $facebook_id = $_GET['id'];
-    // $user = retrieve_messenger_user($facebook_id, $db);
+    $user = retrieve_messenger_user($facebook_id, $db);
     // $messages = retrieve_messenger_messages($facebook_id,$db);
-    var_dump($facebook_id);
+    var_dump($user);
     die();
 ?>
     <div class="content">
