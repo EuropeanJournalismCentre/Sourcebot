@@ -8,7 +8,7 @@
         // $start_date = date("Y-m-d h:i:sa",strtotime('-'.$i.' days'));
         $weekly_users[] = monthly_messenger_users($start_date, 7, $db);
         echo monthly_messenger_users($start_date, 7, $db);
-        $start_date = date("Y-m-d h:i:sa",strtotime('-7 days'));
+        $start_date = date($start_date,strtotime('-7 days'));
         $i++;
     }
     var_dump($weekly_users);
