@@ -151,7 +151,7 @@ function update_bot_messages($name, $value, $last_update, $db) {
 * Dashboard charts queries
 */
 function monthly_messenger_users($days, $db) {
-	$query = "SELECT * from messenger_users where sign_up_timestamp >= now() - interval $days day;";
+	$query = "SELECT * from messenger_users where sign_up_timestamp >= now() - interval '" . $days . "' day;";
 	$result = pg_query($db, $query);
 	return pg_num_rows($result);
 }
