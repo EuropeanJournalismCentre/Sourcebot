@@ -47,8 +47,6 @@ function retrieve_messenger_messages($facebook_id, $db){
 	FROM 'messenger_message_log' AS t";
 	$result = pg_query($db, $query);
 	$name = pg_fetch_all($result);
-	var_dump($name);
-	die();
 	return $name;
 }
 
