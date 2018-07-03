@@ -2,12 +2,12 @@
     include "./includes/header.php";
 
     $weekly_users = array();
-    $start_date = date("Y-m-d h:i:s");
+    $start_date = date("Y-m-d");
     $i = 1;
     while ($i <= 4) {
         // $start_date = date("Y-m-d h:i:sa",strtotime('-'.$i.' days'));
         $weekly_users[] = weekly_messenger_users($start_date, 7, $db);
-        $start_date = date("Y-m-d h:i:s",strtotime('-7 days', strtotime($start_date)));
+        $start_date = date("Y-m-d",strtotime('-7 days', strtotime($start_date)));
         $i++;
     }
     var_dump($weekly_users);
