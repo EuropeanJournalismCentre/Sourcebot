@@ -5,9 +5,9 @@
     $start_date = now();
     $i = 1;
     while ($i <= 7) {
-        $weekly_users[] = monthly_messenger_users($i,$db);
+        $weekly_users[] = monthly_messenger_users($start_date, 7, $db);
+        $start_date = $start_date - $i;
         $i++;
-        $start_date = $start_date - 7;
     }
     var_dump($monthly_users);
 ?>
