@@ -151,7 +151,7 @@ function update_bot_messages($name, $value, $last_update, $db) {
 * Dashboard charts queries
 */
 function monthly_messenger_users($start_date, $end_date, $db) {
-	$query = "SELECT * from messenger_users where DATE(sign_up_timestamp) BETWEEN date '".$start_date."' AND date '".$end_date."'";
+	$query = "SELECT * from messenger_users where DATE(sign_up_timestamp) BETWEEN DATE('".$start_date."') AND DATE('".$end_date."')";
 	var_dump($query);
 	$result = pg_query($db, $query);
 	return pg_num_rows($result);
