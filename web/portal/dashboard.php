@@ -1,11 +1,13 @@
 <?php 
     include "./includes/header.php";
 
-    $monthly_users = array();
+    $weekly_users = array();
+    $start_date = now();
     $i = 1;
     while ($i <= 7) {
-        $monthly_users[] = monthly_messenger_users($i,$db);
+        $weekly_users[] = monthly_messenger_users($i,$db);
         $i++;
+        $start_date = $start_date - 7;
     }
     var_dump($monthly_users);
 ?>
