@@ -8,7 +8,6 @@
     while ($i <= 4) {
         // $start_date = date("Y-m-d h:i:sa",strtotime('-'.$i.' days'));
         $weekly_users[] = monthly_messenger_users($start_date, $end_date, $db);
-        echo monthly_messenger_users($start_date, 7, $db).'<br/>';
         $start_date = date("Y-m-d h:i:sa",strtotime('-7 days', strtotime($start_date)));
         $end_date = date("Y-m-d h:i:sa",strtotime('-7 days', strtotime($end_date)));
         $i++;
