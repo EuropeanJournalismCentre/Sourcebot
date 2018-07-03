@@ -4,31 +4,23 @@
             <ul>
                 <li>
                     <a href="#">
-                        Home
+                        Privacy
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        Company
+                        Terms
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        Portfolio
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        Blog
+                        FAQ
                     </a>
                 </li>
             </ul>
         </nav>
         <p class="copyright pull-right">
-            &copy;
-            <script>
-              document.write(new Date().getFullYear())
-            </script> <a href="#">Sourcebot</a>
+            &copy; <script>document.write(new Date().getFullYear())</script> <a href="#">Sourcebot</a>
         </p>
     </div>
 </footer>
