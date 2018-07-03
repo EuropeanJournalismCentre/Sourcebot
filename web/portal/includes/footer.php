@@ -3,7 +3,7 @@
         <nav class="pull-left">
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="../../policy.php">
                         Privacy
                     </a>
                 </li>
