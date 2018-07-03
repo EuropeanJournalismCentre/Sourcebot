@@ -1,6 +1,6 @@
 <?php 
     include "./includes/header.php";
-    $monthly_users = monthly_messenger_users($db);
+    $monthly_users = monthly_messenger_users("7",$db);
     var_dump($monthly_users);
 ?>
     <div class="content">
