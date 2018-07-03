@@ -3,8 +3,8 @@
 
     $monthly_users = array();
     $i = 1;
-    while (i <= 7) {
-        $monthly_users[] = monthly_messenger_users(i,$db);
+    while ($i <= 7) {
+        $monthly_users[] = monthly_messenger_users($i,$db);
         $i++;
     }
     var_dump($monthly_users);
