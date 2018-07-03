@@ -1,5 +1,9 @@
 var ctx = document.getElementById("myChart");
-var data = '<?= $weekly_users; ?>';
+var data = document.cookie.split(";").
+map(function(el) { return el.split("="); }).
+reduce(function(prev, cur) { prev[cur[0]] = cur[1]; return prev }, {});
+
+data["weekly_users"]
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
