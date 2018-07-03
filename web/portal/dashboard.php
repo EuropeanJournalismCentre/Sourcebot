@@ -1,6 +1,12 @@
 <?php 
     include "./includes/header.php";
-    $monthly_users = monthly_messenger_users("31",$db);
+
+    $monthly_users = array();
+    $i = 1;
+    while (i <= 7) {
+        $monthly_users[] = monthly_messenger_users(i,$db);
+        $i++;
+    }
     var_dump($monthly_users);
 ?>
     <div class="content">
@@ -15,13 +21,6 @@
                         </div>
                         <div class="content">
                             <canvas id="myChart" width="400" height="400"></canvas>
-                            <div class="footer">
-                                <div class="legend">
-                                    <i class="fa fa-circle text-info"></i> Active
-                                    <i class="fa fa-circle text-danger"></i> Inactive Over A Week
-                                    <i class="fa fa-circle text-warning"></i> Inactive
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -33,13 +32,6 @@
                         </div>
                         <div class="content">
                             <canvas id="myChart2" width="400" height="400"></canvas>
-                            <div class="footer">
-                                <div class="legend">
-                                    <i class="fa fa-circle text-info"></i> Active
-                                    <i class="fa fa-circle text-danger"></i> Inactive Over A Week
-                                    <i class="fa fa-circle text-warning"></i> Inactive
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
