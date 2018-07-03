@@ -153,7 +153,7 @@ function update_bot_messages($name, $value, $last_update, $db) {
 function monthly_messenger_users($db) {
 	$query = "SELECT * FROM messenger_users";
 	$result = pg_query($db, $query);
-	return pg_num_rows($result);
+	return pg_fetch_all($result);
 }
 
 /*
