@@ -2,7 +2,7 @@
     include "./includes/header.php";
 
     $weekly_users = array();
-    $start_date = now();
+    $start_date = date("Y-m-d h:i:sa");
     $i = 1;
     while ($i <= 7) {
         $weekly_users[] = monthly_messenger_users($start_date, 7, $db);
