@@ -10,7 +10,7 @@
         $start_date = date("Y-m-d h:i:sa",strtotime('-7 days'));
         $i++;
     }
-    var_dump($monthly_users);
+    var_dump(date("Y-m-d h:i:sa",strtotime('-7 days')));
 ?>
     <div class="content">
         <div class="container-fluid">
