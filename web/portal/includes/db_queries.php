@@ -146,8 +146,8 @@ function update_bot_messages($name, $value, $last_update, $db) {
 /*
 * Dashboard charts queries
 */
-function weekly_messenger_users($start_date, $days, $db) {
-	$query = "SELECT * FROM admin_users WHERE sign_up_timestamp <= now() - interval '3' day AND sign_up_timestamp >= now() - interval '4' day";
+function weekly_messenger_users($start_date, $end_date, $db) {
+	$query = "SELECT * FROM admin_users WHERE sign_up_timestamp <= now() - interval '".$start_date."' day AND sign_up_timestamp >= now() - interval '".$end_date."' day";
 	var_dump($query);
 	$result = pg_query($db, $query);
 	return pg_num_rows($result);
