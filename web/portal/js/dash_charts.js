@@ -3,7 +3,7 @@ $(function() {
         type: 'GET',
         url: '../includes/extra_funcs.php?function=weekly_users',
         success: function(data) {
-            console.log('success', data);
+            console.log(data);
         }
     });
 });
