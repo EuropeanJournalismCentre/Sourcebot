@@ -7,6 +7,11 @@ $(function() {
         }
     });
 });
+var jArray = '<?php echo json_encode($weekly_users); ?>';
+
+for (var i = 0; i < jArray.length; i++) {
+    alert(jArray[i]);
+}
 var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {
     type: 'line',
