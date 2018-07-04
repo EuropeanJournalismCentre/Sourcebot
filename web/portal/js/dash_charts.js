@@ -3,7 +3,7 @@ var data5 = document.cookie.split(";").
 map(function(el) { return el.split("="); }).
 reduce(function(prev, cur) { prev[cur[0]] = cur[1]; return prev }, {});
 
-data5["weekly_users"];
+console.log(data5["weekly_users"]);
 alert(data);
 var myChart = new Chart(ctx, {
     type: 'line',
