@@ -15,7 +15,6 @@
         $j++;
         $k++;
     }
-    var_dump(weekly_users($db));
     var_dump($weekly_users);
 ?>
     <div class="content">
@@ -132,4 +131,8 @@
         </div>
     </div>
 <?php include "./includes/footer.php"; ?>
-<script src="./js/dash_charts.js"></script>
+<script>
+    var data = <?php $weekly_users;?>
+    console.log(data);
+</script>
+<!--<script src="./js/dash_charts.js"></script>-->
