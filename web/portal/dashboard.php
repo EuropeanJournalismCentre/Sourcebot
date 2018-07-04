@@ -132,6 +132,6 @@
     </div>
 <?php include "./includes/footer.php"; ?>
 <script>
-    var weekly = "<?php echo json_encode($weekly_users);?>";
+    //var weekly = "<?php echo json_encode($weekly_users);?>";
 </script>
 <script src="./js/dash_charts.js"></script>

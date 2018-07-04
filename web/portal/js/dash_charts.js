@@ -2,10 +2,10 @@ var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: ["Week 1", "Week 2", "Week 3", "Week 4"],
+        labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7"],
         datasets: [{
             label: '# of weekly Users',
-            data: weekly,
+            data: [12, 19, 3, 5, 2, 3, 7],
             borderColor: [
                 'rgba(255,99,132,1)',
                 'rgba(54, 162, 235, 1)',
@@ -28,6 +28,7 @@ var myChart = new Chart(ctx, {
         }
     }
 });
+
 var ctx2 = document.getElementById("myChart2");
 var myChart2 = new Chart(ctx2, {
     type: 'line',
