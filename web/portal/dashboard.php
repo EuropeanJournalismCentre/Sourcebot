@@ -18,7 +18,7 @@
         $k++;
     }
     // setcookie("weekly_users", $weekly_users);
-    var_dump(weekly_users());
+    var_dump(weekly_users($db));
     var_dump($weekly_users);
 ?>
     <div class="content">
