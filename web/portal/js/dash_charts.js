@@ -1,17 +1,12 @@
 $(function() {
     $.ajax({
         type: 'GET',
-        url: '../includes/extra_funcs.php?function=weekly_users',
+        url: '../includes/extra_funcs.php',
         success: function(data) {
             console.log(data);
         }
     });
 });
-var jArray = JSON.parse('<?php echo json_encode($weekly_users); ?>');
-
-for (var i = 0; i < jArray.length; i++) {
-    alert(jArray[i]);
-}
 var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {
     type: 'line',

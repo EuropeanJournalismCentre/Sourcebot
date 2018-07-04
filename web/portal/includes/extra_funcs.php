@@ -1,6 +1,6 @@
 <?php 
     
-    function weekly_users($db) {
+    include "./includes/header.php";
         $weekly_users = array();
         // $start_date = date("Y-m-d");
         // $end_date = date("Y-m-d",strtotime('-7 days', strtotime($start_date)));
@@ -16,4 +16,3 @@
             $k++;
         }
         return $weekly_users;
-    }
