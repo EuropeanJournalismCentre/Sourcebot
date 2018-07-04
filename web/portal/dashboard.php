@@ -20,7 +20,6 @@
     <div class="content">
         <div class="container-fluid">
             <div class="row">
-
                 <div class="col-md-6">
                     <div class="card">
                         <div class="header">
@@ -28,9 +27,10 @@
                             <p class="category">24 Hours performance</p>
                         </div>
                         <div class="content">
-                        <div class="service-container" data-service="<?= $weekly_users; ?>">
-                            <canvas id="myChart" width="400" height="400"></canvas>
+                            <div class="service-container" data-service="<?= $weekly_users; ?>">
+                                <canvas id="myChart" width="400" height="400"></canvas>
 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -45,7 +45,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
             </div>
             <div class="row">
             <div class="col-md-6">
@@ -135,7 +134,7 @@
     var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ["Day 1", "Day 2", "Day 3", "Day 4"],
+            labels: ["Week 1", "Week 2", "Week 3", "Week 4"],
             datasets: [{
                 label: '# of weekly Users',
                 data: JSON.parse(weekly),
