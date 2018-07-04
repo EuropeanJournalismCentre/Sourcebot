@@ -7,7 +7,7 @@ $(function() {
         }
     });
 });
-var jArray = '<?php echo json_encode($weekly_users); ?>';
+var jArray = JSON.parse('<?php echo json_encode($weekly_users); ?>');
 
 for (var i = 0; i < jArray.length; i++) {
     alert(jArray[i]);
