@@ -1,18 +1,9 @@
-$(document).ready(function() {
-    $('.service-container').each(function() {
-        var container = $(this);
-        var service = container.data('service');
-        console.log(service);
-        // service variable now contains the value of $myService->getValue();
-    });
-});
 var ctx = document.getElementById("myChart");
 var data5 = document.cookie.split(";").
 map(function(el) { return el.split("="); }).
 reduce(function(prev, cur) { prev[cur[0]] = cur[1]; return prev }, {});
 
 console.log(data5["weekly_users"]);
-alert(data5);
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
@@ -72,4 +63,12 @@ var myChart2 = new Chart(ctx2, {
             }]
         }
     }
+});
+$(document).ready(function() {
+    $('.service-container').each(function() {
+        var container = $(this);
+        var service = container.data('service');
+        console.log(service);
+        // service variable now contains the value of $myService->getValue();
+    });
 });
