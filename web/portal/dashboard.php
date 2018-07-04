@@ -274,7 +274,7 @@
         data: {
             labels: ["Week 1", "Week 2", "Week 3", "Week 4"],
             datasets: [{
-                label: '# of weekly Users',
+                label: '# of weekly Messages',
                 data: JSON.parse(weekly),
                 borderColor: [
                     'rgba(255,99,132,1)',
@@ -303,7 +303,7 @@
         data: {
             labels: ["30 Days", "60 Days", "90 Days", "120 Days", "150 Days", "180 Days", "210 Days", "240 Days", "270 Days", "300 Days"],
             datasets: [{
-                label: '# of monthly Users',
+                label: '# of monthly Messages',
                 data: JSON.parse(monthly),
                 borderColor: [
                     'rgb(29, 199, 234);',
