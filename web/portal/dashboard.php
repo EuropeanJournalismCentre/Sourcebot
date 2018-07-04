@@ -132,7 +132,7 @@
     </div>
 <?php include "./includes/footer.php"; ?>
 <script>
-    var data = <?php $weekly_users;?>
+    var data = "<?php $weekly_users;?>";
     console.log(data);
 </script>
 <!--<script src="./js/dash_charts.js"></script>-->
