@@ -173,6 +173,7 @@
         }
     });
 
+    var monthly = "<?php echo json_encode($monthly_users);?>";
     var ctx2 = document.getElementById("myChart2");
     var myChart2 = new Chart(ctx2, {
         type: 'line',
@@ -180,7 +181,7 @@
             labels: ["Jan", "Feb", "Mar", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"],
             datasets: [{
                 label: '# of monthly Users',
-                data: [12, 19, 3, 5, 90, 3, 12, 0, 3, 5, 2, 7],
+                data: JSON.parse(monthly),
                 borderColor: [
                     'rgb(29, 199, 234);',
                     'rgba(54, 162, 235, 1)',
