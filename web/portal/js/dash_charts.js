@@ -1,3 +1,12 @@
+$(function() {
+    $.ajax({
+        type: 'GET',
+        url: '../includes/extra_funcs.php?function=weekly_users',
+        success: function(data) {
+            console.log('success', data);
+        }
+    });
+});
 var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {
     type: 'line',
