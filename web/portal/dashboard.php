@@ -132,7 +132,7 @@
     </div>
 <?php include "./includes/footer.php"; ?>
 <script>
-    //var weekly = "<?php echo json_encode($weekly_users);?>";
+    var weekly = "<?php echo json_encode($weekly_users);?>";
     var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {
     type: 'line',
@@ -140,7 +140,7 @@ var myChart = new Chart(ctx, {
         labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7"],
         datasets: [{
             label: '# of weekly Users',
-            data: [12, 19, 3, 5, 2, 3, 7],
+            data: weekly,
             borderColor: [
                 'rgba(255,99,132,1)',
                 'rgba(54, 162, 235, 1)',
