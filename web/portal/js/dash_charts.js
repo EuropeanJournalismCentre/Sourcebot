@@ -1,12 +1,4 @@
-$(function() {
-    $.ajax({
-        type: 'GET',
-        url: '../includes/extra_funcs.php',
-        success: function(data) {
-            console.log(data);
-        }
-    });
-});
+alert(document.cookie);
 var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {
     type: 'line',

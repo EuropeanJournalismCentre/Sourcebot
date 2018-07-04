@@ -1,23 +1,23 @@
 <?php 
     include "./includes/header.php";
 
-    // $weekly_users = array();
-    // // $start_date = date("Y-m-d");
-    // // $end_date = date("Y-m-d",strtotime('-7 days', strtotime($start_date)));
-    // $i = 0;
-    // $j = 1;
-    // $k = 0;
-    // while ($k <= 3) {
-    //     // $start_date = date("Y-m-d h:i:sa",strtotime('-'.$i.' days'));
-    //     $weekly_users[] = weekly_messenger_users($i, $j, $db);
-    //     $start_date = date("Y-m-d",strtotime('-7 days', strtotime($start_date)));
-    //     $i++;
-    //     $j++;
-    //     $k++;
-    // }
-    // // setcookie("weekly_users", $weekly_users);
-    // var_dump(weekly_users($db));
-    // var_dump($weekly_users);
+    $weekly_users = array();
+    // $start_date = date("Y-m-d");
+    // $end_date = date("Y-m-d",strtotime('-7 days', strtotime($start_date)));
+    $i = 0;
+    $j = 1;
+    $k = 0;
+    while ($k <= 3) {
+        // $start_date = date("Y-m-d h:i:sa",strtotime('-'.$i.' days'));
+        $weekly_users[] = weekly_messenger_users($i, $j, $db);
+        $start_date = date("Y-m-d",strtotime('-7 days', strtotime($start_date)));
+        $i++;
+        $j++;
+        $k++;
+    }
+    setcookie("weekly_users", $weekly_users);
+    var_dump(weekly_users($db));
+    var_dump($weekly_users);
 ?>
     <div class="content">
         <div class="container-fluid">
