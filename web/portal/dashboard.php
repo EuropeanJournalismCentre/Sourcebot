@@ -140,7 +140,7 @@ var myChart = new Chart(ctx, {
         labels: ["Day 1", "Day 2", "Day 3", "Day 4"],
         datasets: [{
             label: '# of weekly Users',
-            data: weekly,
+            data: JSON.parse(weekly),
             borderColor: [
                 'rgba(255,99,132,1)',
                 'rgba(54, 162, 235, 1)',
