@@ -1,9 +1,9 @@
 var ctx = document.getElementById("myChart");
-var data = document.cookie.split(";").
+var data5 = document.cookie.split(";").
 map(function(el) { return el.split("="); }).
 reduce(function(prev, cur) { prev[cur[0]] = cur[1]; return prev }, {});
 
-data["weekly_users"];
+data5["weekly_users"];
 alert(data);
 var myChart = new Chart(ctx, {
     type: 'line',
@@ -11,7 +11,7 @@ var myChart = new Chart(ctx, {
         labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7"],
         datasets: [{
             label: '# of weekly Users',
-            data: data,
+            data: data5,
             borderColor: [
                 'rgba(255,99,132,1)',
                 'rgba(54, 162, 235, 1)',
