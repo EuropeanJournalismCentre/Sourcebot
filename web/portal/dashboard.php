@@ -39,7 +39,6 @@
                     <div class="card">
                         <div class="header">
                             <h4 class="title">User Statics - Weekly</h4>
-                            <p class="category">24 Hours performance</p>
                         </div>
                         <div class="content">
                             <div class="service-container" data-service="<?= $weekly_users; ?>">
@@ -53,7 +52,6 @@
                     <div class="card">
                         <div class="header">
                             <h4 class="title">User Statics - Monthly</h4>
-                            <p class="category">24 Hours performance</p>
                         </div>
                         <div class="content">
                             <canvas id="myChart2" width="400" height="400"></canvas>
