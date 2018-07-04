@@ -15,4 +15,4 @@
             $j++;
             $k++;
         }
-        return $weekly_users;
+        echo json_encode($weekly_users);
