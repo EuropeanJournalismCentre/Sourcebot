@@ -1,8 +1,5 @@
 <?php 
-    if(isset($_GET['function']) && $_GET['function'] !=''){
-        $result = $_GET['function']();
-        echo json_encode($result);
-    }
+    
     function weekly_users($db) {
         $weekly_users = array();
         // $start_date = date("Y-m-d");

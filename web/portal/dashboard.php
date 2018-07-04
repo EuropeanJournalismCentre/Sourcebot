@@ -2,7 +2,10 @@
     include "./includes/header.php";
     include "./includes/extra_funcs.php";
 
-
+    if(isset($_GET['function']) && $_GET['function'] !=''){
+        $result = $_GET['function']($db);
+        echo json_encode($result);
+    }
     $weekly_users = array();
     // $start_date = date("Y-m-d");
     // $end_date = date("Y-m-d",strtotime('-7 days', strtotime($start_date)));
