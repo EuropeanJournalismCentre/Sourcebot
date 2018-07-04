@@ -268,7 +268,7 @@
     * Statistics on Bot messages
     */
     var weekly = "<?php echo json_encode($weekly_messages);?>";
-    var ctx = document.getElementById("myChart");
+    var ctx = document.getElementById("myChart3");
     var myChart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -297,7 +297,7 @@
     });
 
     var monthly = "<?php echo json_encode($monthly_messages);?>";
-    var ctx2 = document.getElementById("myChart2");
+    var ctx2 = document.getElementById("myChart4");
     var myChart2 = new Chart(ctx2, {
         type: 'line',
         data: {
