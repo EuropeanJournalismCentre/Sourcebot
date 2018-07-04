@@ -60,8 +60,6 @@
         $j += 30;
         $k++;
     }
-    var_dump($monthly_messages);
-    var_dump($weekly_messages);
 ?>
     <div class="content">
         <div class="container-fluid">
