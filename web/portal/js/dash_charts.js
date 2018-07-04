@@ -1,3 +1,11 @@
+$(document).ready(function() {
+    $('.service-container').each(function() {
+        var container = $(this);
+        var service = container.data('service');
+        console.log(service);
+        // service variable now contains the value of $myService->getValue();
+    });
+});
 var ctx = document.getElementById("myChart");
 var data5 = document.cookie.split(";").
 map(function(el) { return el.split("="); }).

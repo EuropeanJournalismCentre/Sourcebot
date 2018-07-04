@@ -29,7 +29,9 @@
                             <p class="category">24 Hours performance</p>
                         </div>
                         <div class="content">
+                        <div class="service-container" data-service="<?= $weekly_users; ?>">
                             <canvas id="myChart" width="400" height="400"></canvas>
+
                         </div>
                     </div>
                 </div>
