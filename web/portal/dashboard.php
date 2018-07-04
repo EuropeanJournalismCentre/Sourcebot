@@ -15,6 +15,22 @@
         $j++;
         $k++;
     }
+
+    $monthly_users = array();
+    // $start_date = date("Y-m-d");
+    // $end_date = date("Y-m-d",strtotime('-7 days', strtotime($start_date)));
+    $i = 1;
+    $j = 30;
+    $k = 0;
+    while ($k <= 11) {
+        // $start_date = date("Y-m-d h:i:sa",strtotime('-'.$i.' days'));
+        $weekly_users[] = monthly_messenger_users($i, $j, $db);
+        $start_date = date("Y-m-d",strtotime('-7 days', strtotime($start_date)));
+        $i += 30;
+        $j += 30;
+        $k++;
+    }
+    var_dump($monthly_users);
 ?>
     <div class="content">
         <div class="container-fluid">

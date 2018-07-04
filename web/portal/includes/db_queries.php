@@ -148,7 +148,13 @@ function update_bot_messages($name, $value, $last_update, $db) {
 */
 function weekly_messenger_users($start_date, $end_date, $db) {
 	$query = "SELECT * FROM messenger_users WHERE sign_up_timestamp <= now() - interval '".$start_date."' day AND sign_up_timestamp >= now() - interval '".$end_date."' day";
-	// var_dump($query);
+	$result = pg_query($db, $query);
+	return pg_num_rows($result);
+}
+
+function monthly_messenger_users($start_date, $end_date, $db) {
+	$query = "SELECT * FROM messenger_users WHERE sign_up_timestamp <= now() - interval '".$start_date."' day AND sign_up_timestamp >= now() - interval '".$end_date."' day";
+	var_dump($query);
 	$result = pg_query($db, $query);
 	return pg_num_rows($result);
 }
