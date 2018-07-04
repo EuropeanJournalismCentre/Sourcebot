@@ -10,7 +10,7 @@
     while ($k <= 3) {
         // $start_date = date("Y-m-d h:i:sa",strtotime('-'.$i.' days'));
         $weekly_users[] = weekly_messenger_users($i, $j, $db);
-        $start_date = date("Y-m-d",strtotime('-7 days', strtotime($start_date)));
+        // $start_date = date("Y-m-d",strtotime('-7 days', strtotime($start_date)));
         $i++;
         $j++;
         $k++;
@@ -24,8 +24,8 @@
     $k = 0;
     while ($k <= 11) {
         // $start_date = date("Y-m-d h:i:sa",strtotime('-'.$i.' days'));
-        $weekly_users[] = monthly_messenger_users($i, $j, $db);
-        $start_date = date("Y-m-d",strtotime('-7 days', strtotime($start_date)));
+        $monthly_users[] = monthly_messenger_users($i, $j, $db);
+        // $start_date = date("Y-m-d",strtotime('-7 days', strtotime($start_date)));
         $i += 30;
         $j += 30;
         $k++;
