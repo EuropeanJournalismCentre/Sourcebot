@@ -166,7 +166,6 @@ function weekly_messenger_messages($start_date, $end_date, $db) {
 
 function monthly_messenger_messages($start_date, $end_date, $db) {
 	$query = "SELECT * FROM messenger_message_log WHERE log_timestamp <= now() - interval '".$start_date."' day AND log_timestamp >= now() - interval '".$end_date."' day";
-	var_dump($query);
 	$result = pg_query($db, $query);
 	return pg_num_rows($result);
 }
