@@ -4,7 +4,7 @@
 
     if(isset($_GET['function']) && $_GET['function'] !=''){
         $result = $_GET['function']($db);
-        echo json_encode($result);
+        return json_encode($result);
     }
     $weekly_users = array();
     // $start_date = date("Y-m-d");
