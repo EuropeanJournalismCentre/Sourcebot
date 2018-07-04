@@ -1,6 +1,5 @@
 <?php 
     include "./includes/header.php";
-    include "./includes/extra_funcs.php";
 
     // $weekly_users = array();
     // // $start_date = date("Y-m-d");
