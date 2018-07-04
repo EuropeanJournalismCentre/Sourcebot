@@ -29,8 +29,8 @@
                                         <td><?= $value['error_code'];?></td>
                                         <td><?= $value['error_subcode'];?></td>
                                         <td><?= $value['error_type'];?></td>
-                                        <td><?= $value['error_timestamp'];?></td>
                                         <td><?= $value['fbtrace_id'];?></td>
+                                        <td><?= $value['error_timestamp'];?></td>
                                     </tr>
                                 <?php } ?>
                                 </tbody>
