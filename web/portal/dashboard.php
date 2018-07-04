@@ -95,9 +95,7 @@
                             <h4 class="title">Messenger Messages - Weekly</h4>
                         </div>
                         <div class="content">
-                                <canvas id="myChart3" width="400" height="400"></canvas>
-
-                            </div>
+                            <canvas id="myChart3" width="400" height="400"></canvas>
                         </div>
                     </div>
                 </div>
