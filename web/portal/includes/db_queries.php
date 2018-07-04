@@ -159,6 +159,19 @@ function monthly_messenger_users($start_date, $end_date, $db) {
 	return pg_num_rows($result);
 }
 
+function weekly_messenger_messages($start_date, $end_date, $db) {
+	$query = "SELECT * FROM messenger_message_log WHERE sign_up_timestamp <= now() - interval '".$start_date."' day AND sign_up_timestamp >= now() - interval '".$end_date."' day";
+	$result = pg_query($db, $query);
+	return pg_num_rows($result);
+}
+
+function monthly_messenger_messages($start_date, $end_date, $db) {
+	$query = "SELECT * FROM messenger_message_log WHERE sign_up_timestamp <= now() - interval '".$start_date."' day AND sign_up_timestamp >= now() - interval '".$end_date."' day";
+	var_dump($query);
+	$result = pg_query($db, $query);
+	return pg_num_rows($result);
+}
+
 /*
 * Unused Queries
 */
