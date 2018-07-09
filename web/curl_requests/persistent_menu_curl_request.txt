@@ -1,0 +1,41 @@
+curl -X POST -H "Content-Type: application/json" -d '{
+    "persistent_menu":[
+        {
+        "locale":"default",
+        "composer_input_disabled": true,
+        "call_to_actions":[
+            {
+                "title":"Latest News",
+                "type":"postback",
+                "payload":"LATESTNEWS_PAYLOAD"
+            },
+            {
+                "title":"Articles from",
+                "type":"postback",
+                "payload":"ARTICLESFROM_PAYLOAD"
+            },
+            {
+                "title":"Options",
+                "type":"nested",
+                "call_to_actions":[
+                    {
+                        "title":"Share",
+                        "type":"postback",
+                        "payload":"SHARE_PAYLOAD"
+                    },
+                    {
+                        "title":"Help",
+                        "type":"postback",
+                        "payload":"HELP_PAYLOAD"
+                    },
+                    {
+                        "title":"About",
+                        "type":"postback",
+                        "payload":"ABOUT_PAYLOAD"
+                    }
+                ]
+            }
+        ]
+        }
+    ]
+}' "https://graph.facebook.com/v2.6/me/messenger_profile?access_token=PAGE_ACCESS_TOKEN"

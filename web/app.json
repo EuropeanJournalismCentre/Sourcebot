@@ -1,0 +1,29 @@
+{
+  "name": "Sourcebot",
+  "description": "An open source newsbot to help African news organisations deliver personalized news and engage more effectively via messaging platforms.",
+  "repository": "https://github.com/EuropeanJournalismCommision/Sourcebot",
+  "env": {
+    "ACCESS_TOKEN": {
+      "description": "Messenger ACCESS_TOKEN.",
+      "value": "secret"
+    },
+    "VERIFY_TOKEN": {
+      "description": "Messenger VERIFICATION_TOKEN.",
+      "value": "secret"
+    },
+    "WEBSITE_URL": {
+      "description": "Link to the website where your content resides.",
+      "value": "url"
+    },
+    "PROFILE_PIC_URL": {
+      "description": "Link to your Facebook page's picture.",
+      "value": "link to profile pic"
+    }
+  },
+  "addons": [
+	"heroku-postgresql:hobby-dev",
+  "bonsai:sandbox-6",
+  "sendgrid:starter",
+  "memcachier:dev"
+  ]
+}

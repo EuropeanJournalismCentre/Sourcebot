@@ -8,11 +8,11 @@
       "value": "secret"
     },
     "ACCESS_TOKEN": {
-      "description": "ACCESS_TOKEN copy the access token from your app's Messenger settings.",
+      "description": "Messenger ACCESS_TOKEN.",
       "value": "secret"
     },
     "VERIFY_TOKEN": {
-      "description": "VERIFICATION_TOKEN make sure this value matches the verify token you give in your Messenger settings.",
+      "description": "Messenger VERIFICATION_TOKEN.",
       "value": "secret"
     },
     "SENDGRID_API": {
