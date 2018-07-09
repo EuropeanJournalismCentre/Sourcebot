@@ -36,7 +36,7 @@ $challenge = $_REQUEST['hub_challenge'];
 $verify_token = $_REQUEST['hub_verify_token'];
 error_log($verify_token);
 $old_message = "";
-if ($verify_token === $VERIFY_TOKEN) {
+if ($verify_token === getenv('VERIFY_TOKEN')) {
     //If the Verify token matches, return the challenge.
     error_log($challenge);
 } else {
