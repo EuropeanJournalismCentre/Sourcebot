@@ -138,6 +138,7 @@ $result = pg_query($db, $query);
 $query = "CREATE TABLE IF NOT EXISTS admin_users (
         id SERIAL PRIMARY KEY,
         name VARCHAR(100) 				NOT NULL,
+        email VARCHAR(100) 				NOT NULL,
         password VARCHAR(100) 			NOT NULL,
         permissions int 				NOT NULL,
         last_login TIMESTAMP 			NOT NULL,
@@ -151,7 +152,7 @@ $password = hash('sha256', $password);
 $time = date('Y-m-d H:i:s', time());
 
 $query = "INSERT INTO admin_users (id, name, email, password, permissions, last_login, sign_up_timestamp)
-            VALUES (DEFAULT, '" . $name . "','admin@sourcebot.io','" . $password . "', 2, '" . $time . "', '" . $time . "')";
+            VALUES (DEFAULT, '" . $name . "','admin@sourcebot.com','" . $password . "', 2, '" . $time . "', '" . $time . "')";
 $result = pg_query($db, $query);
 
 $query = "CREATE TABLE IF NOT EXISTS bot_messages (
