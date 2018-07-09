@@ -3,17 +3,36 @@
   "description": "An open source newsbot to help African news organisations deliver personalized news and engage more effectively via messaging platforms.",
   "repository": "https://github.com/EuropeanJournalismCommision/Sourcebot",
   "env": {
+    "BOT_NAME": {
+      "description": "BOT'S ACTUAL NAME.",
+      "value": "secret"
+    },
     "ACCESS_TOKEN": {
-      "description": "Messenger ACCESS_TOKEN.",
+      "description": "ACCESS_TOKEN copy the access token from your app's Messenger settings.",
       "value": "secret"
     },
     "VERIFY_TOKEN": {
-      "description": "Messenger VERIFICATION_TOKEN.",
+      "description": "VERIFICATION_TOKEN make sure this value matches the verify token you give in your Messenger settings.",
+      "value": "secret"
+    },
+    "SENDGRID_API": {
+      "description": "Send Grid API Key.",
+      "value": "secret"
+    },
+    "WEBSITE_URL": {
+      "description": "Link to the website where your content resides.",
+      "value": "http://source.co.zw/"
+    },
+    "PROFILE_PIC_URL": {
+      "description": "Link to your Facebook page's picture.",
       "value": "secret"
     }
   },
   "addons": [
 	"heroku-postgresql:hobby-dev",
-	"bonsai:sandbox-6"
+  "bonsai:sandbox-6",
+  "sendgrid:starter",
+  "memcachier:dev",
+  "papertrail:choklad"
   ]
 }

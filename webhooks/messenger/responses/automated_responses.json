@@ -1,0 +1,30 @@
+{
+    "error": {
+        "message": "(#100) The parameter recipient is required",
+        "type": "OAuthException",
+        "code": 100,
+        "fbtrace_id": "EckcOFDoLZQ"
+    }
+}
+
+{
+    "object": "page",
+    "entry": [{
+        "id": "1267159230055732",
+        "time": 1527724862462,
+        "messaging": [{
+            "sender": {
+                "id": "1815596901867385"
+            },
+            "recipient": {
+                "id": "1267159230055732"
+            },
+            "timestamp": 1527724861967,
+            "message": {
+                "mid": "mid.$cAASAeShPwuxp5MSyD1js4ChBWlN8",
+                "seq": 101391,
+                "text": "gold"
+            }
+        }]
+    }]
+}
