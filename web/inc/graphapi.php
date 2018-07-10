@@ -5,8 +5,8 @@
 /************************************************************ Retrieve User Profile Graph Api ******************************************************************************************************************************************************************/
 
 function retrieve_user_profile($sender, $PAGE_ACCESS_TOKEN){
-    $url = "https://graph.facebook.com/v3.0/" . $sender . "?fields=first_name,last_name,profile_pic,locale,timezone,gender,email&" . getenv('ACCESS_TOKEN');
-
+    $url = "https://graph.facebook.com/v3.0/" . $sender . "?fields=first_name,last_name,profile_pic,locale,timezone,gender,email&access_token=" . $PAGE_ACCESS_TOKEN . "";
+	
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -14,6 +14,8 @@ function retrieve_user_profile($sender, $PAGE_ACCESS_TOKEN){
     $result = curl_exec($ch);
     curl_close($ch);
     
+    error_log("Access Token:\n" . getenv('ACCESS_TOKEN'));
+    error_log("Graph API Call :\n" . $url);
     error_log("\nResult for retrieve user profile: " . $result . " .\n");
     $obj = json_decode($result);
 
