@@ -12,7 +12,8 @@ function elasticsearch_article_query($sender, $message, $PAGE_ACCESS_TOKEN){
 	// Build the json payload data
 	send_text_message($sender, "You searched for: " . $message, $PAGE_ACCESS_TOKEN);
 	// Build the json payload data
-	$url =  getenv('BONSAI_URL') . "_search?source={%20%22query%22:%20{%20%22match%22:%20{%20%22post_content%22:%20%22" . $message . "%22%20}%20}%20}";
+	$url =  getenv('BONSAI_URL') 
+	. "/_search/?source_content_type=application/json&source={%20%22query%22:%20{%20%22match%22:%20{%20%22post_content%22:%20%22" . $message . "%22%20}%20}%20}";
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -92,7 +93,8 @@ function elasticsearch_by_month($sender, $month, $PAGE_ACCESS_TOKEN){
 	// Build the json payload data
 	send_text_message($sender, "Heres the News From: " . $month, $PAGE_ACCESS_TOKEN);
 	// Build the json payload data
-	$url =  getenv('BONSAI_URL') . '_search?source={%20"query"%20:%20{%20"constant_score":%20{%20"filter":%20{%20"range"%20:%20{%20"post_date"%20:%20{%20"gte":%20"' . $month . '",%20"format":%20"yyyy-MM"%20}%20}%20}%20}%20}%20}';
+	$url =  getenv('BONSAI_URL') 
+	. '/_search/?source_content_type=application/json&source={%20"query"%20:%20{%20"constant_score":%20{%20"filter":%20{%20"range"%20:%20{%20"post_date"%20:%20{%20"gte":%20"' . $month . '",%20"format":%20"yyyy-MM"%20}%20}%20}%20}%20}%20}';
     
     $ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
@@ -160,7 +162,8 @@ function elasticsearch_by_date($sender, $date, $PAGE_ACCESS_TOKEN){
 	// Build the json payload data
 	send_text_message($sender, "Heres the News From: " . $date, $PAGE_ACCESS_TOKEN);
 	// Build the json payload data
-	$url =  getenv('BONSAI_URL') . '_search?source={%20"query"%20:%20{%20"constant_score":%20{%20"filter":%20{%20"range"%20:%20{%20"post_date"%20:%20{%20"gte":%20"' . $date . '",%20"lte":%20"' . $date . '",%20"format":%20"yyyy-MM-dd"%20}%20}%20}%20}%20}%20}';
+	$url =  getenv('BONSAI_URL') 
+	. '/_search/?source_content_type=application/json&source={%20"query"%20:%20{%20"constant_score":%20{%20"filter":%20{%20"range"%20:%20{%20"post_date"%20:%20{%20"gte":%20"' . $date . '",%20"lte":%20"' . $date . '",%20"format":%20"yyyy-MM-dd"%20}%20}%20}%20}%20}%20}';
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -226,7 +229,8 @@ function elasticsearch_by_date($sender, $date, $PAGE_ACCESS_TOKEN){
 function elasticsearch_latest_articles($sender, $PAGE_ACCESS_TOKEN){
 	send_text_message($sender, "Heres the Latest News: ", $PAGE_ACCESS_TOKEN);
 	// Build the json payload data
-	$url =  getenv('BONSAI_URL') . '_search?source={%20"sort"%20:%20[%20{%20"post_date"%20:%20{"order"%20:%20"desc"}},%20"_score"%20]%20}';
+	$url =  getenv('BONSAI_URL') 
+	. '/_search/?source_content_type=application/json&source={%20"sort"%20:%20[%20{%20"post_date"%20:%20{"order"%20:%20"desc"}},%20"_score"%20]%20}';
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -290,7 +294,8 @@ function elasticsearch_latest_articles($sender, $PAGE_ACCESS_TOKEN){
 /******************************************************************** Elasticsearch Article By Id ******************************************************************************************************************************************************************/
 
 function elasticsearch_by_id($sender, $id, $PAGE_ACCESS_TOKEN){
-	$url = getenv('BONSAI_URL') . "_search?source={%20%22query%22:%20{%20%22match%22:%20{%20%22_id%22:%20%22" . $id . "%22%20}%20}%20}";
+	$url = getenv('BONSAI_URL') 
+	. "/_search/?source_content_type=application/json&source={%20%22query%22:%20{%20%22match%22:%20{%20%22_id%22:%20%22" . $id . "%22%20}%20}%20}";
 	$ch = curl_init();
 	error_log("\n elasticsearch_by_id url: " . $url . "\n");
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
