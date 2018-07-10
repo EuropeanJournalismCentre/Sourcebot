@@ -21,7 +21,7 @@
     },
     "WEBSITE_URL": {
       "description": "Link to the website where your content resides.",
-      "value": "http://source.co.zw/"
+      "value": "http://example.com/"
     },
     "PROFILE_PIC_URL": {
       "description": "Link to your Facebook page's picture.",
