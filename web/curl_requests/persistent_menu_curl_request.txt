@@ -38,4 +38,4 @@ curl -X POST -H "Content-Type: application/json" -d '{
         ]
         }
     ]
-}' "https://graph.facebook.com/v2.6/me/messenger_profile?access_token=EAABxBl3ZATskBAGG8dW89qHBPUAFeCJNdxVxBhJGi62K1rB8wQeIyRksauMlZBIc1xm8saazhrrGanGCHRhZBlZBrmjkWFZA0UgrxyZAgmXa73NZCPZBrVFUH2pYrah3meqTXgd0cSZBohPnFvD1HFWIh1XRouhr3ZAdPIHUhwsqfd8wZDZD"
+}' "https://graph.facebook.com/v2.6/me/messenger_profile?access_token=PAGE_ACCESS_TOKEN"
