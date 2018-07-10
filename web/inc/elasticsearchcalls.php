@@ -22,7 +22,7 @@ function elasticsearch_article_query($sender, $message, $PAGE_ACCESS_TOKEN){
 			
 	$obj = json_decode($result);
 	$i = 0;
-	error_log($result);
+    error_log("\nResult for search by query: " . $result . " .\n");
 	foreach($obj->hits->hits as $data) {
 		error_log("\nArticle Search Result - \n" . $i);
 		$title = $data->_source->post_title;
@@ -100,7 +100,8 @@ function elasticsearch_by_month($sender, $month, $PAGE_ACCESS_TOKEN){
 	curl_setopt($ch, CURLOPT_URL, $url);
 	$result = curl_exec($ch);
 	curl_close($ch);
-			
+	
+    error_log("\nResult for search by month: " . $result . " .\n");
 	$obj = json_decode($result);
 	$i = 0;
 	foreach($obj->hits->hits as $data) {
@@ -166,7 +167,8 @@ function elasticsearch_by_date($sender, $date, $PAGE_ACCESS_TOKEN){
 	curl_setopt($ch, CURLOPT_URL, $url);
 	$result = curl_exec($ch);
 	curl_close($ch);
-			
+	
+    error_log("\nResult for search by date: " . $result . " .\n");
 	$obj = json_decode($result);
 	$i = 0;
 	foreach($obj->hits->hits as $data) {
@@ -232,6 +234,7 @@ function elasticsearch_latest_articles($sender, $PAGE_ACCESS_TOKEN){
 	$result = curl_exec($ch);
     curl_close($ch);
     
+    error_log("\nResult for latest articles search: " . $result . " .\n");
 	$obj = json_decode($result);
 	$i = 0;
 	foreach($obj->hits->hits as $data) {
