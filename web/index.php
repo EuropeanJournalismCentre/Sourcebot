@@ -32,13 +32,17 @@ $PAGE_ACCESS_TOKEN = getenv('ACCESS_TOKEN');
 $PROFILE_PIC_URL = getenv('PROFILE_PIC_URL');
 $WEBSITE_URL = getenv('WEBSITE_URL');
 
+error_log("Verify Token: " . getenv('VERIFY_TOKEN'));
+error_log("Page Access Token: " . getenv('ACCESS_TOKEN'));
+error_log("Profile Pic Url: " . getenv('PROFILE_PIC_URL'));
+error_log("Website Url: " . getenv('WEBSITE_URL'));
+
 $challenge = $_REQUEST['hub_challenge'];
 $verify_token = $_REQUEST['hub_verify_token'];
-error_log($verify_token);
 $old_message = "";
-if ($verify_token === getenv('VERIFY_TOKEN')) {
+if ($verify_token === $VERIFY_TOKEN) {
     //If the Verify token matches, return the challenge.
-    error_log($challenge);
+    echo $challenge;
 } else {
     $request_contents = file_get_contents('php://input');
     error_log("\nResponse: " . $request_contents . " .\n");

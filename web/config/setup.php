@@ -6,11 +6,6 @@ ini_set('memcached.sess_binary', 1);
 ini_set('memcached.sess_sasl_username', getenv('MEMCACHIER_USERNAME'));
 ini_set('memcached.sess_sasl_password', getenv('MEMCACHIER_PASSWORD'));
 
-$VERIFY_TOKEN = getenv('VERIFY_TOKEN');
-$PAGE_ACCESS_TOKEN = getenv('ACCESS_TOKEN');
-$PROFILE_PIC_URL = getenv('PROFILE_PIC_URL');
-$WEBSITE_URL = getenv('WEBSITE_URL');
-
 error_log("Verify Token: " . getenv('VERIFY_TOKEN'));
 error_log("Page Access Token: " . getenv('ACCESS_TOKEN'));
 error_log("Profile Pic Url: " . getenv('PROFILE_PIC_URL'));

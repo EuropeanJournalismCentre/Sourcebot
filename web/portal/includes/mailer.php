@@ -8,7 +8,7 @@ require '../../vendor/autoload.php';
 
 function send_mail($receiver_email, $message, $reference)
 {
-    $from = new SendGrid\Email(null, "no-reply@sourcebot.io");
+    $from = new SendGrid\Email(null, "no-reply@sourcebot.com");
     $subject = $reference;
     $to = new SendGrid\Email(null, $receiver_email);
     $content = new SendGrid\Content("text/html", $message);

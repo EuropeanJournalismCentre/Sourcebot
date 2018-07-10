@@ -1,3 +1,31 @@
+<?php
+include __DIR__ . '/conn.php';
+include __DIR__ . '/db_queries.php';
+
+//Start Session
+session_start();
+
+$name = $_SESSION['name'];
+$email = $_SESSION['email'];
+$permissions = $_SESSION['permissions'];
+$status = $_SESSION['status'];
+error_log($name . "\n");
+error_log($email . "\n");
+error_log($permissions . "\n");
+error_log($status . "\n");
+
+if (empty($_SESSION['name'])) {
+    $name = $_SESSION['name'];
+    $email = $_SESSION['email'];
+    $status = $_SESSION['status'];
+    $permissions = $_SESSION['permissions'];
+    if ($name == "" || $email == "" || $status != "logged in") {
+        header("Location: ./index.php");
+        exit();
+    }
+}
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -17,8 +45,8 @@
     <!--  CSS for Demo Purpose, don't include it in your project     -->
     <link href="assets/css/demo.css" rel="stylesheet" />
     <!--     Fonts and icons     -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
 </head>
 
@@ -32,7 +60,7 @@
                 </a>
             </div>
 
-            <ul class="nav"> 
+            <ul class="nav">
                 <li>
                     <a href="dashboard.php">
                         <i class="pe-7s-graph"></i>
@@ -58,13 +86,13 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="diagnostics.php">
                         <i class="pe-7s-bell"></i>
-                        <p>Notifications</p>
+                        <p>Diagnostics</p>
                     </a>
                 </li>
                 <li class="active-pro">
-                    <a href="#">
+                    <a href="bot_profile.php">
                         <i class="pe-7s-config"></i>
                         <p>Settings</p>
                     </a>
@@ -85,38 +113,7 @@
                     <a class="navbar-brand" href="#">Dashboard</a>
                 </div>
                 <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-left">
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-dashboard"></i>
-                                <p class="hidden-lg hidden-md">Dashboard</p>
-                            </a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-globe"></i>
-                                <b class="caret hidden-lg hidden-md"></b>
-                                <p class="hidden-lg hidden-md">
-                                    5 Notifications
-                                    <b class="caret"></b>
-                                </p>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Notification 1</a></li>
-                                <li><a href="#">Notification 2</a></li>
-                                <li><a href="#">Notification 3</a></li>
-                                <li><a href="#">Notification 4</a></li>
-                                <li><a href="#">Another notification</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-
                     <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="">
-                                <p>Account</p>
-                            </a>
-                        </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <p>
@@ -125,17 +122,11 @@
                                 </p>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
+                                <li><a href="bot_profile.php">Bot Profile</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="./includes/logout.php">
                                 <p>Log out</p>
                             </a>
                         </li>
