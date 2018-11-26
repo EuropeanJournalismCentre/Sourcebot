@@ -54,6 +54,10 @@ You can run local CircleCI builds with `circleci build` using the [CircleCI CLI]
 
 ## <a name="deploy"></a> Deploy
 
+[![Setup Video](https://img.youtube.com/vi/h7NNFD03Xnc/0.jpg)](https://www.youtube.com/watch?v=h7NNFD03Xnc)
+
+Here is the full setup process on [Medium](https://medium.com/sourcebot/sourcebot-setting-up-and-configuring-sourcebot-89aa7d91b4cf)
+
 You can deploy Sourcebot to your own web-server or quickly and for free to Heroku.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
